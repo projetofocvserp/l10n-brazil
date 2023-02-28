@@ -124,6 +124,9 @@
             <field name="amount_untaxed" position="after">
                 <field string="(-) Discount" name="amount_discount_value" />
             </field>
+            <field name="amount_total" position="replace">
+                <field string="Total" name="amount_financial_total" />
+            </field>
             <field name="amount_total" position="after">
                 <field string="(-) Tax Withholding" name="amount_tax_withholding" />
             </field>
@@ -180,6 +183,7 @@
                 <field name="insurance_value" optional="hide" />
                 <field name="other_value" optional="hide" />
                 <field name="estimate_tax" optional="hide" />
+                <field name="amount_total" optional="show"/>
             </xpath>
 
 
