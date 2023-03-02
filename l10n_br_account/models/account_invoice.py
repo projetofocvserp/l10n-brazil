@@ -362,7 +362,8 @@ class AccountMove(models.Model):
                 )
 
                 if taxes_mapped[grouping_key]:
-                    taxes_mapped[grouping_key]["amount"] += tax_vals["amount"]
+                    # taxes_mapped[grouping_key]["amount"] += tax_vals["amount"] #TODO descomentar caso não funcione.
+                    taxes_mapped[grouping_key]["amount"] = tax_vals["amount"]
                     taxes_mapped[grouping_key][
                         "tax_base_amount"
                     ] += self._get_base_amount_to_display(
