@@ -76,6 +76,10 @@ class TestInvoiceDiscount(TransactionCase):
                 "discount_value": 100.0,
             }
         )
+        for line in self.move_id.invoice_line_ids:
+            # Metodos onchange precisam ser
+            # chamados no Testes
+            line._compute_amounts()
 
     def test_discount(self):
         self.assertEqual(self.line_id.price_unit, 1000)
