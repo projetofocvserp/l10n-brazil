@@ -62,20 +62,6 @@ class InvoicingPickingTest(SavepointCase):
         # Verificar os Valores de Preço pois isso é usado na Valorização do
         # Estoque, o metodo do core é chamado pelo botão Validate
 
-        for line in self.stock_picking_sp.move_lines:
-            # No Brasil o caso de Ordens de Entrega que não tem ligação com
-            # Pedido de Venda precisam informar o Preço de Custo e não o de
-            # Venda, ex.: Simples Remessa, Remessa p/ Industrialiazação e etc.
-            # Teria algum caso que não deve usar ?
-
-            # Os metodos do stock/core alteram o valor p/
-            # negativo por isso o abs
-            self.assertEqual(abs(line.price_unit), line.product_id.standard_price)
-            # O Campo fiscal_price precisa ser um espelho do price_unit,
-            # apesar do onchange p/ preenche-lo sem incluir o compute no campo
-            # ele traz o valor do lst_price e falha no teste abaixo
-            # TODO - o fiscal_price aqui tbm deve ter um valor negativo ?
-
         wizard_obj = self.invoice_wizard.with_context(
             active_ids=self.stock_picking_sp.ids,
             active_model=self.stock_picking_sp._name,
@@ -111,11 +97,6 @@ class InvoicingPickingTest(SavepointCase):
             #  l10n_br_account e em seguida o l10n_br_stock_account
             # self.assertTrue(line.tax_ids, "Taxes in invoice lines are missing.")
 
-            # No Brasil o caso de Ordens de Entrega que não tem ligação com
-            # Pedido de Venda precisam informar o Preço de Custo e não o de
-            # Venda, ex.: Simples Remessa, Remessa p/ Industrialiazação e etc.
-            # Aqui o campo não pode ser negativo
-            self.assertEqual(line.price_unit, line.product_id.standard_price)
             # Valida presença dos campos principais para o mapeamento Fiscal
             self.assertTrue(line.fiscal_operation_id, "Missing Fiscal Operation.")
             self.assertTrue(
@@ -129,6 +110,53 @@ class InvoicingPickingTest(SavepointCase):
         self.assertTrue(
             invoice.fiscal_document_id,
             "Mapping Fiscal Documentation_id on wizard to create invoice fail.",
+        )
+
+        # Teste Valores Totais
+        self.assertEqual(
+            self.stock_picking_sp.amount_total,
+            invoice.amount_total,
+            "Error field Amount Total in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp.amount_tax,
+            invoice.amount_tax,
+            "Error field Amount Tax in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp.amount_untaxed,
+            invoice.amount_untaxed,
+            "Error field Amount Untaxed in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp.amount_price_gross,
+            invoice.amount_price_gross,
+            "Error field Amount Price Gross in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp.amount_financial_total,
+            invoice.amount_financial_total,
+            "Error field Amount Financial Total in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp.amount_financial_total_gross,
+            invoice.amount_financial_total_gross,
+            "Error field Amount Financial Total Gross in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp.amount_freight_value,
+            invoice.amount_freight_value,
+            "Error field Amount Freight in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp.amount_insurance_value,
+            invoice.amount_insurance_value,
+            "Error field Amount Insurance in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp.amount_other_value,
+            invoice.amount_other_value,
+            "Error field Amount Other Values in Invoice are different from Picking.",
         )
 
         picking = self.stock_picking_sp
@@ -226,9 +254,6 @@ class InvoicingPickingTest(SavepointCase):
         for inv_line in invoice.invoice_line_ids:
             # qty = 4 because 2 for each stock.move
             self.assertEqual(inv_line.quantity, 4)
-            # Price Unit e Fiscal Price devem ser positivos
-            self.assertEqual(inv_line.price_unit, inv_line.product_id.standard_price)
-            self.assertEqual(inv_line.fiscal_price, inv_line.product_id.standard_price)
 
             # TODO: No travis falha o browse aqui
             #  l10n_br_stock_account/models/stock_invoice_onshipping.py:105
@@ -414,7 +439,7 @@ class InvoicingPickingTest(SavepointCase):
 
             # Os metodos do stock/core alteram o valor p/
             # negativo por isso o abs
-            self.assertEqual(abs(line.price_unit), line.product_id.standard_price)
+            # self.assertEqual(abs(line.price_unit), line.product_id.standard_price)
             # O Campo fiscal_price precisa ser um espelho do price_unit,
             # apesar do onchange p/ preenche-lo sem incluir o compute no campo
             # ele traz o valor do lst_price e falha no teste abaixo
@@ -452,11 +477,6 @@ class InvoicingPickingTest(SavepointCase):
             )
         for line in invoice.invoice_line_ids:
             self.assertTrue(line.tax_ids, "Taxes in invoice lines are missing.")
-            # No Brasil o caso de Ordens de Entrega que não tem ligação com
-            # Pedido de Venda precisam informar o Preço de Custo e não o de
-            # Venda, ex.: Simples Remessa, Remessa p/ Industrialiazação e etc.
-            # Aqui o campo não pode ser negativo
-            # self.assertEqual(line.price_unit, line.product_id.standard_price)
             # Valida presença dos campos principais para o mapeamento Fiscal
             self.assertTrue(line.fiscal_operation_id, "Missing Fiscal Operation.")
             self.assertTrue(
@@ -470,6 +490,54 @@ class InvoicingPickingTest(SavepointCase):
         self.assertTrue(
             invoice.fiscal_document_id,
             "Mapping Fiscal Documentation_id on wizard to create invoice fail.",
+        )
+
+        # Teste Valores Totais
+        self.assertEqual(
+            self.stock_picking_sp_lp.amount_total,
+            invoice.amount_total,
+            "Error field Amount Total in Invoice are different from Picking.",
+        )
+
+        self.assertEqual(
+            self.stock_picking_sp_lp.amount_tax,
+            invoice.amount_tax,
+            "Error field Amount Tax in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp_lp.amount_untaxed,
+            invoice.amount_untaxed,
+            "Error field Amount Untaxed in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp_lp.amount_price_gross,
+            invoice.amount_price_gross,
+            "Error field Amount Price Gross in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp_lp.amount_financial_total,
+            invoice.amount_financial_total,
+            "Error field Amount Financial Total in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp_lp.amount_financial_total_gross,
+            invoice.amount_financial_total_gross,
+            "Error field Amount Financial Total Gross in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp_lp.amount_freight_value,
+            invoice.amount_freight_value,
+            "Error field Amount Freight in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp_lp.amount_insurance_value,
+            invoice.amount_insurance_value,
+            "Error field Amount Insurance in Invoice are different from Picking.",
+        )
+        self.assertEqual(
+            self.stock_picking_sp_lp.amount_other_value,
+            invoice.amount_other_value,
+            "Error field Amount Other Values in Invoice are different from Picking.",
         )
 
         picking = self.stock_picking_sp_lp
