@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
     <template id="portal_address" inherit_id="website_sale.address">
@@ -86,8 +86,30 @@
                             t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''}"
                             t-att-value="'phone' in checkout and checkout['phone']"
                         />
+                        <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
+                        <label class="col-form-label" for="mobile">Celular</label>
+                        <input
+                            type="tel"
+                            name="mobile"
+                            t-attf-class="form-control #{error.get('mobile') and 'is-invalid' or ''}"
+                            t-att-value="'mobile' in checkout and checkout['mobile']"
+                        />
+                        <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
                     </div>
-
+                    <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
+                    <div
+                        t-attf-class="form-group #{error.get('inscr_est') and 'o_has_error' or ''} col-lg-6"
+                        id="div_inscr_est"
+                    >
+                        <label class="col-form-label" for="inscr_est">Inscrição Estadual</label>
+                        <input
+                            type="text"
+                            name="inscr_est"
+                            t-attf-class="form-control #{error.get('inscr_est') and 'is-invalid' or ''}"
+                            t-att-value="'inscr_est' in checkout and checkout['inscr_est']"
+                        />
+                    </div>
+                    <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
                     <div class="w-100" />
                     <t
                         t-set='zip_city'
@@ -124,7 +146,7 @@
                         t-attf-class="form-group #{error.get('street_number') and 'o_has_error' or ''} col-xl-6"
                     >
                         <label class="col-form-label" for="street_number">
-                            Nº</label>
+                            Número</label>
                         <input
                             type="text"
                             name="street_number"
@@ -262,56 +284,53 @@
                                         name='use_same'
                                         value="1"
                                         checked='checked'
-                                    />
-                                    Ship to the same address
-                                    <span
+                                    /> Ship to the same address <span
                                         class='ship_to_other text-muted'
                                         style="display: none"
-                                    >
-                                        &amp;nbsp;(<i>Your shipping address
-                                        will be requested later) </i></span>
+                                    > &amp;nbsp;(<i>Your shipping address
+                                    will be requested later) </i></span>
                                 </label>
                             </div>
                         </div>
                     </t>
                 </div>
-                    <input
+                <input
                     type="hidden"
                     name="csrf_token"
                     t-att-value="request.csrf_token()"
                 />
-                    <input type="hidden" name="submitted" value="1" />
-                    <input
+                <input type="hidden" name="submitted" value="1" />
+                <input
                     type="hidden"
                     name="partner_id"
                     t-att-value="partner_id or '0'"
                 />
-                    <input type="hidden" name="callback" t-att-value="callback" />
-                    <!-- Example -->
-                    <input
+                <input type="hidden" name="callback" t-att-value="callback" />
+                <!-- Example -->
+                <input
                     type="hidden"
                     name="field_required"
                     t-att-value="'phone,name'"
                 />
 
-                    <div class="d-flex justify-content-between">
-                        <a
+                <div class="d-flex justify-content-between">
+                    <a
                         role="button"
                         t-att-href="mode == ('new', 'billing') and '/shop/cart' or '/shop/checkout'"
                         class="btn btn-secondary mb32"
                     >
-                            <i class="fa fa-chevron-left" />
-                            <span>Back</span>
-                        </a>
-                        <a
+                        <i class="fa fa-chevron-left" />
+                        <span>Back</span>
+                    </a>
+                    <a
                         role="button"
                         href="#"
                         class="btn btn-primary mb32 a-submit a-submit-disable a-submit-loading"
                     >
-                            <span>Next</span>
-                            <i class="fa fa-chevron-right" />
-                        </a>
-                    </div>
+                        <span>Next</span>
+                        <i class="fa fa-chevron-right" />
+                    </a>
+                </div>
             </form>
         </form>
     </template>
