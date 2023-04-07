@@ -29,6 +29,14 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
         });
     }
 
+    $("#radioCompany").click( function() {
+        $("#id_cpf").text("CNPJ");
+        
+    });
+    $("#radioPerson").click( function() {
+        $("#id_cpf").text("CPF");
+    });
+        
     var zip_cleave = new Cleave(".input-zipcode", {
         blocks: [5, 3],
         delimiter: "-",

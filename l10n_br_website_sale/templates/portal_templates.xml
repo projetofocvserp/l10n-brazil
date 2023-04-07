@@ -28,7 +28,7 @@
                                 id="radioPerson"
                                 value="person"
                                 t-attf-class="#{error.get('company_type') and 'is-invalid' or ''}"
-                                t-att-checked="'company_type' in checkout and checkout['company_type'] == 'person'"
+                                t-att-checked="true, 'company_type' in checkout and checkout['company_type'] == 'person'"
                             />
                             Pessoa Física </div>
                     </div>
@@ -64,8 +64,13 @@
                             t-attf-class="form-group #{error.get('cnpj_cpf') and 'o_has_error' or ''} col-xl-6"
                             id="cnpj_cpf"
                         >
-                            <label class="col-form-label" for="contact_name">
-                                CPF/CNPJ</label>
+                            <!-- <t t-if="person == person">
+                                <label class="col-form-label" for="contact_name">CPF</label>   
+                            </t>
+                            <t t-else="">
+                                <label class="col-form-label" for="contact_name">CNPJ</label>
+                            </t> -->
+                            <label id="id_cpf" class="col-form-label" for="contact_name">CPF</label>
                             <input
                                 type="text"
                                 id="input_cnpj_cpf"
