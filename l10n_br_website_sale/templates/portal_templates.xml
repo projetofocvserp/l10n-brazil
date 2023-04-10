@@ -36,7 +36,10 @@
                     <div
                         t-attf-class="form-group #{error.get('name') and 'o_has_error' or ''} col-lg-12 div_name"
                     >
-                        <label class="col-form-label" for="name">Name</label>
+                        <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
+                            Incluído o id na label -->
+                        <label id="id_name" class="col-form-label" for="name">Name</label>
+                        <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
                         <input
                             type="text"
                             name="name"
@@ -64,13 +67,10 @@
                             t-attf-class="form-group #{error.get('cnpj_cpf') and 'o_has_error' or ''} col-xl-6"
                             id="cnpj_cpf"
                         >
-                            <!-- <t t-if="person == person">
-                                <label class="col-form-label" for="contact_name">CPF</label>   
-                            </t>
-                            <t t-else="">
-                                <label class="col-form-label" for="contact_name">CNPJ</label>
-                            </t> -->
+                            <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
+                            Incluído o id na label -->
                             <label id="id_cpf" class="col-form-label" for="contact_name">CPF</label>
+                            <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
                             <input
                                 type="text"
                                 id="input_cnpj_cpf"
@@ -80,27 +80,6 @@
                             />
                         </div>
                     </t>
-                    <div
-                        t-attf-class="form-group #{error.get('phone') and 'o_has_error' or ''} col-lg-6"
-                        id="div_phone"
-                    >
-                        <label class="col-form-label" for="phone">Phone</label>
-                        <input
-                            type="tel"
-                            name="phone"
-                            t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''}"
-                            t-att-value="'phone' in checkout and checkout['phone']"
-                        />
-                        <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
-                        <label class="col-form-label" for="mobile">Celular</label>
-                        <input
-                            type="tel"
-                            name="mobile"
-                            t-attf-class="form-control #{error.get('mobile') and 'is-invalid' or ''}"
-                            t-att-value="'mobile' in checkout and checkout['mobile']"
-                        />
-                        <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
-                    </div>
                     <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
                     <div
                         t-attf-class="form-group #{error.get('inscr_est') and 'o_has_error' or ''} col-lg-6"
@@ -113,6 +92,34 @@
                             t-attf-class="form-control #{error.get('inscr_est') and 'is-invalid' or ''}"
                             t-att-value="'inscr_est' in checkout and checkout['inscr_est']"
                         />
+                    </div>
+                    <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
+                    <div
+                        t-attf-class="form-group #{error.get('phone') and 'o_has_error' or ''} col-lg-6"
+                        id="div_phone"
+                    >
+                        <label class="col-form-label" for="phone">Phone</label>
+                        <input
+                            type="tel"
+                            name="phone"
+                            t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''}"
+                            t-att-value="'phone' in checkout and checkout['phone']"
+                        />
+                    </div>
+                    <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
+                    <div
+                        t-attf-class="form-group #{error.get('mobile') and 'o_has_error' or ''} col-lg-6"
+                        id="div_mobile"
+                    >
+                        <label class="col-form-label" for="mobile">Celular</label>
+                        <input
+                            type="tel"
+                            id="input_mobile"
+                            name="mobile"
+                            t-attf-class="form-control #{error.get('mobile') and 'is-invalid' or ''}"
+                            t-att-value="'mobile' in checkout and checkout['mobile']"
+                        />
+
                     </div>
                     <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
                     <div class="w-100" />
@@ -211,15 +218,14 @@
                         t-attf-class="form-group #{error.get('state_id') and 'o_has_error' or ''} col-lg-6 div_state"
                         t-att-style="(not country or not country.state_ids) and 'display: none'"
                     >
-                        <label class="col-form-label" for="state_id">State /
-                            Province</label>
+                        <label class="col-form-label" for="state_id">State</label>
                         <select
                             id="state_id"
                             name="state_id"
                             t-attf-class="form-control #{error.get('state_id') and 'is-invalid' or ''}"
                             data-init="1"
                         >
-                            <option value="">State / Province...</option>
+                            <option value="">State...</option>
                             <t t-foreach="country and country.state_ids or []" t-as="s">
                                 <option
                                     t-att-value="s.id"

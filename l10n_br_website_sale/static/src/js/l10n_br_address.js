@@ -31,11 +31,20 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
 
     $("#radioCompany").click( function() {
         $("#id_cpf").text("CNPJ");
+        $("#id_name").text("Razão Social")
+        $("#div_inscr_est").show();
+        $("div_mobile").show();
         
     });
     $("#radioPerson").click( function() {
         $("#id_cpf").text("CPF");
+        $("#id_name").text("Nome Completo");
+        $("div_mobile").hide(); 100;
+        $("#div_inscr_est").hide(), 100;
     });
+        $("#div_inscr_est").hide();
+        $("div_mobile").hide();
+        $("#id_name").text("Nome Completo");
         
     var zip_cleave = new Cleave(".input-zipcode", {
         blocks: [5, 3],
