@@ -76,12 +76,6 @@ class StockMove(models.Model):
         the price and fiscal quantity."""
         self._onchange_commercial_quantity()
 
-        # No Brasil o caso de Ordens de Entrega com Operação Fiscal
-        # de Saída precisam informar o Preço de Custo e não o de Venda
-        # ex.: Simples Remessa, Remessa p/ Industrialiazação e etc.
-        if self.fiscal_operation_id.fiscal_operation_type == "out":
-            self.price_unit = self.product_id.standard_price
-
     def _get_new_picking_values(self):
         """Prepares a new picking for this move as it could not be assigned to
         another picking. This method is designed to be inherited."""
@@ -124,15 +118,21 @@ class StockMove(models.Model):
 
     def _get_price_unit_invoice(self, inv_type, partner, qty=1):
 
-        result = super()._get_price_unit_invoice(inv_type, partner, qty)
-        product = self.mapped("product_id")
-        product.ensure_one()
+        # TODO - Alterar o metodo no stock_picking_invoicing
+        #  já que o valor informado no Picking deve ser o valor a ser
+        #  utilizado
+        # result = super()._get_price_unit_invoice(inv_type, partner, qty)
+
+        # Preço Maior no caso de mais de um valor
+        result = max(self.mapped("price_unit"))
 
         # No Brasil o caso de Ordens de Entrega com Operação Fiscal
-        # de Saída precisam informar o Preço de Custo e não o de Venda
-        # ex.: Simples Remessa, Remessa p/ Industrialiazação e etc.
+        # de Saída ex.: Simples Remessa, Remessa p/ Industrialiazação
+        # e etc, e nesses casos se houver diferença entre do price_unit
+        # de linhas agrupadas usa o menor valor
         if inv_type in ("out_invoice", "out_refund"):
-            result = product.standard_price
+            # Preço Menor no caso de mais de um valor
+            result = min(self.mapped("price_unit"))
 
         return result
 
@@ -141,10 +141,11 @@ class StockMove(models.Model):
         result = super()._get_price_unit()
 
         # No Brasil o caso de Ordens de Entrega com Operação Fiscal
-        # de Saída precisam informar o Preço de Custo e não o de Venda
-        # ex.: Simples Remessa, Remessa p/ Industrialiazação e etc.
+        # de Saída ex.: Simples Remessa, Remessa p/ Industrialiazação
+        # e etc, e nesses casos se houver diferença entre do price_unit
+        # de linhas agrupadas usa o menor valor.
         if self.fiscal_operation_id.fiscal_operation_type == "out":
-            result = self.product_id.standard_price
+            result = min(self.mapped("price_unit"))
 
         return result
 
