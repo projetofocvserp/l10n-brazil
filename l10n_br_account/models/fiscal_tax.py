@@ -14,8 +14,18 @@ class FiscalTax(models.Model):
             account_taxes |= taxes.filtered(
                 lambda t: t.type_tax_use == user_type
                 and t.active
-                and t.deductible == deductible
+                and t.deductible is False
             )
+            # Caso a operação fiscal esteja definida para usar o impostos
+            # dedutíveis os impostos contábeis dedutíveis são adicionados na linha
+            # da movimentação/fatura.
+            if deductible:
+                account_taxes |= taxes.filtered(
+                    lambda t: t.type_tax_use == user_type
+                    and t.active
+                    and t.deductible == deductible
+                )
+
         return account_taxes
 
     def _account_taxes(self):
@@ -31,7 +41,7 @@ class FiscalTax(models.Model):
             )
         return self.env["account.tax"].search(
             [
-                ("tax_group_id", "=", account_tax_group.id),
+                ("fiscal_tax_ids.id", "=", (self.id or self.id.origin)),
                 ("active", "=", True),
                 ("company_id", "=", company.id),
             ]
