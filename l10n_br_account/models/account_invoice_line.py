@@ -398,14 +398,15 @@ class AccountMoveLine(models.Model):
             sign = 1
 
         amount_currency = self.price_total * sign
+        calculated_amount_without_taxes = amount_currency + self.amount_tax_not_included + self.amount_tax_included
         balance = currency._convert(
-            amount_currency,
+            calculated_amount_without_taxes, 
             company.currency_id,
             company,
             date or fields.Date.context_today(self),
         )
         return {
-            "amount_currency": amount_currency,
+            "amount_currency": calculated_amount_without_taxes,
             "currency_id": currency.id,
             "debit": balance > 0.0 and balance or 0.0,
             "credit": balance < 0.0 and -balance or 0.0,
