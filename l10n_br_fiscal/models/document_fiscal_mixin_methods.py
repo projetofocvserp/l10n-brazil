@@ -132,8 +132,14 @@ class FiscalDocumentMixinMethods(models.AbstractModel):
                     add_to_amount = 0.0
 
                 # Valor do documento (NF)
+                # amount_total += (
+                #     line.amount_untaxed + line.amount_tax + add_to_amount - rm_to_amount
+                # )
                 amount_total += (
-                    line.amount_untaxed + line.amount_tax + add_to_amount - rm_to_amount
+                    -line.amount_currency + 
+                    line.amount_tax_included + 
+                    line.amount_tax_not_included + 
+                    add_to_amount - rm_to_amount
                 )
 
                 # Valor Liquido (TOTAL + IMPOSTOS - RETENÇÕES)
