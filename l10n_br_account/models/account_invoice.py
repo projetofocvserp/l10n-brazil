@@ -443,13 +443,13 @@ class AccountMove(models.Model):
                     tax_vals["tax_repartition_line_id"]
                 )
 
-                if taxes_mapped[grouping_key]:
-                    taxes_mapped[grouping_key]["amount"] += tax_vals["amount"]
-                    taxes_mapped[grouping_key][
-                        "tax_base_amount"
-                    ] += self._get_base_amount_to_display(
-                        tax_vals["base"], tax_repartition_line, tax_vals["group"]
-                    )
+                # if taxes_mapped[grouping_key]:
+                    # taxes_mapped[grouping_key]["amount"] += tax_vals["amount"]
+                    # taxes_mapped[grouping_key][
+                        # "tax_base_amount"
+                    # ] += self._get_base_amount_to_display(
+                        # tax_vals["base"], tax_repartition_line, tax_vals["group"]
+                    # )
 
         return taxes_mapped
 
