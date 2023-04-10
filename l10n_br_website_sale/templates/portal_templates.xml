@@ -101,6 +101,7 @@
                         <label class="col-form-label" for="phone">Phone</label>
                         <input
                             type="tel"
+                            id="id_phone"
                             name="phone"
                             t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''}"
                             t-att-value="'phone' in checkout and checkout['phone']"

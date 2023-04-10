@@ -45,7 +45,12 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
         $("#div_inscr_est").hide();
         $("div_mobile").hide();
         $("#id_name").text("Nome Completo");
-        
+    
+    setTimeout(function() {
+        $("#input_mobile").attr("placeholder", "+55-XX-XXXX-XXXX");
+        $("#id_phone").attr("placeholder", "+55-XX-XXXX-XXXX");    
+        }, 1000);
+
     var zip_cleave = new Cleave(".input-zipcode", {
         blocks: [5, 3],
         delimiter: "-",
