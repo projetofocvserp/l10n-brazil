@@ -28,27 +28,27 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
             },
         });
     }
-
+    
     $("#radioCompany").click( function() {
         $("#id_cpf").text("CNPJ");
         $("#id_name").text("Razão Social")
         $("#div_inscr_est").show();
-        $("div_mobile").show();
-        
+        $("#div_mobile").show();
     });
+
     $("#radioPerson").click( function() {
         $("#id_cpf").text("CPF");
         $("#id_name").text("Nome Completo");
-        $("div_mobile").hide(); 100;
+        $("#div_mobile").hide(), 100;
         $("#div_inscr_est").hide(), 100;
     });
         $("#div_inscr_est").hide();
-        $("div_mobile").hide();
+        $("#div_mobile").hide();
         $("#id_name").text("Nome Completo");
     
     setTimeout(function() {
-        $("#input_mobile").attr("placeholder", "+55-XX-XXXX-XXXX");
-        $("#id_phone").attr("placeholder", "+55-XX-XXXX-XXXX");    
+        $("#id_mobile").attr("placeholder", "+55-(XX)-XXXXX-XXXX");
+        $("#id_phone").attr("placeholder", "+55-XX-XXXXX-XXXX");    
         }, 1000);
 
     var zip_cleave = new Cleave(".input-zipcode", {

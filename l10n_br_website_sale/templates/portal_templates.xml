@@ -47,7 +47,8 @@
                             t-att-value="'name' in checkout and checkout['name']"
                         />
                     </div>
-                    <div class="w-100" />
+                    <div
+                        class="w-100" />
                     <t t-if="mode[1] == 'billing'">
                         <div
                             t-attf-class="form-group #{error.get('email') and 'o_has_error' or ''} col-lg-6"
@@ -85,7 +86,7 @@
                         t-attf-class="form-group #{error.get('inscr_est') and 'o_has_error' or ''} col-lg-6"
                         id="div_inscr_est"
                     >
-                        <label class="col-form-label" for="inscr_est">Inscrição Estadual</label>
+                        <label class="col-form-label, required" for="inscr_est">Inscrição Estadual</label>
                         <input
                             type="text"
                             name="inscr_est"
@@ -108,6 +109,8 @@
                         />
                     </div>
                     <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
+
+
                     <div
                         t-attf-class="form-group #{error.get('mobile') and 'o_has_error' or ''} col-lg-6"
                         id="div_mobile"
@@ -115,20 +118,23 @@
                         <label class="col-form-label" for="mobile">Celular</label>
                         <input
                             type="tel"
-                            id="input_mobile"
+                            id="id_mobile"
                             name="mobile"
+                            required=""
                             t-attf-class="form-control #{error.get('mobile') and 'is-invalid' or ''}"
                             t-att-value="'mobile' in checkout and checkout['mobile']"
                         />
 
                     </div>
                     <!-- AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica -->
-                    <div class="w-100" />
+                    <div
+                        class="w-100" />
                     <t
                         t-set='zip_city'
                         t-value='country and [x for x in country.get_address_fields() if x in ["zip", "city"]] or ["city", "zip"]'
                     />
-                    <t t-if="'zip' in zip_city">
+                    <t
+                        t-if="'zip' in zip_city">
                         <div
                             t-attf-class="form-group #{error.get('zip') and 'o_has_error' or ''} col-md-6 div_zip"
                         >
@@ -154,7 +160,8 @@
                             t-att-value="'street_name' in checkout and checkout['street_name']"
                         />
                     </div>
-                    <div class="w-100" />
+                    <div
+                        class="w-100" />
                     <div
                         t-attf-class="form-group #{error.get('street_number') and 'o_has_error' or ''} col-xl-6"
                     >
@@ -179,7 +186,8 @@
                             t-att-value="'district' in checkout and checkout['district']"
                         />
                     </div>
-                    <div class="w-100" />
+                    <div
+                        class="w-100" />
                     <div
                         t-attf-class="form-group #{error.get('street2') and 'o_has_error' or ''} col-md-6 div_street2"
                     >
@@ -284,7 +292,8 @@
                         />
                     </div>
 
-                    <div class="w-100" />
+                    <div
+                        class="w-100" />
                     <t t-if="mode == ('new', 'billing') and not only_services">
                         <div class="col-lg-12">
                             <div class="checkbox">

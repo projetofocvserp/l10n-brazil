@@ -134,6 +134,12 @@ class L10nBrWebsiteSale(WebsiteSale):
             new_values["street_number"] = values["street_number"]
         if "district" in values:
             new_values["district"] = values["district"]
+        # AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
+        if "mobile" in values:
+            new_values["mobile"] = values["mobile"]
+        if "inscr_est" in values:
+            new_values["inscr_est"] = values["inscr_est"]
+        # AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
         return new_values, errors, error_msg
 
     def checkout_form_validate(self, mode, all_form_values, data):
