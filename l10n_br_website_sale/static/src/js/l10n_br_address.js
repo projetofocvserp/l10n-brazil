@@ -28,10 +28,10 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
             $(this).val(cnpj);
         }; 
     });
-    
+
     $("#radioCompany").click( function() {
         $("#id_cpf").text("CNPJ");
-        $("#id_name").text("Razão Social")
+        $("#id_name").text("Razão Social");
         $("#div_inscr_est").show();
         $("#div_mobile").show();
     });
@@ -41,10 +41,19 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
         $("#id_name").text("Nome Completo");
         $("#div_mobile").hide(), 100;
         $("#div_inscr_est").hide(), 100;
+        // required=false no inscr_est
     });
-        $("#div_inscr_est").hide();
-        $("#div_mobile").hide();
-        $("#id_name").text("Nome Completo");
+
+    $("#div_inscr_est").hide();
+    $("#div_mobile").hide();
+    $("#id_name").text("Nome Completo");
+
+    if ($('#radioCompany').prop('checked')) {
+        $("#id_cpf").text("CNPJ");
+        $("#id_name").text("Razão Social");
+        $("#div_inscr_est").show();
+        $("#div_mobile").show();
+    };
     
     setTimeout(function() {
         $("#id_mobile").attr("placeholder", "+55-(XX)-XXXXX-XXXX");

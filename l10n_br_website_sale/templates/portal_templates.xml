@@ -28,7 +28,7 @@
                                 id="radioPerson"
                                 value="person"
                                 t-attf-class="#{error.get('company_type') and 'is-invalid' or ''}"
-                                t-att-checked="true, 'company_type' in checkout and checkout['company_type'] == 'person'"
+                                t-att-checked="'company_type' in checkout and checkout['company_type'] == 'person'"
                             />
                             Pessoa Física </div>
                     </div>
@@ -44,7 +44,7 @@
                         <input
                             type="text"
                             name="name"
-                            style="background:RGBA(199,199,199, 0.5)"
+                            style="background:#FFF7EC"
                             t-attf-class="form-control #{error.get('name') and 'is-invalid' or ''}"
                             t-att-value="'name' in checkout and checkout['name']"
                         />
@@ -62,7 +62,7 @@
                             <input
                                 type="email"
                                 name="email"
-                                style="background:RGBA(199,199,199, 0.5)"
+                                style="background:#FFF7EC"
                                 t-attf-class="form-control #{error.get('email') and 'is-invalid' or ''}"
                                 t-att-value="'email' in checkout and checkout['email']"
                             />
@@ -80,7 +80,7 @@
                             <input
                                 type="text"
                                 id="input_cnpj_cpf"
-                                style="background:RGBA(199,199,199, 0.5)"
+                                style="background:#FFF7EC"
                                 name="cnpj_cpf"
                                 t-attf-class="form-control #{error.get('cnpj_cpf') and 'is-invalid' or ''}"
                                 t-att-value="'cnpj_cpf' in checkout and checkout['cnpj_cpf']"
@@ -97,7 +97,7 @@
                         <input
                             type="text"
                             name="inscr_est"
-                            style="background:RGBA(199,199,199, 0.5)"
+                            style="background:#FFF7EC"
                             t-attf-class="form-control #{error.get('inscr_est') and 'is-invalid' or ''}"
                             t-att-value="'inscr_est' in checkout and checkout['inscr_est']"
                         />
@@ -113,7 +113,7 @@
                             type="tel"
                             id="id_phone"
                             name="phone"
-                            style="background:RGBA(199,199,199, 0.5)"
+                            style="background:#FFF7EC"
                             t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''}"
                             t-att-value="'phone' in checkout and checkout['phone']"
                         />
@@ -153,7 +153,7 @@
                             <input
                                 type="text"
                                 name="zip"
-                                style="background:RGBA(199,199,199, 0.5)"
+                                style="background:#FFF7EC"
                                 t-attf-class="input-zipcode form-control #{error.get('zip') and 'is-invalid' or ''}"
                                 t-att-value="'zip' in checkout and checkout['zip']"
                             />
@@ -168,7 +168,7 @@
                         <input
                             type="text"
                             name="street_name"
-                            style="background:RGBA(199,199,199, 0.5)"
+                            style="background:#FFF7EC"
                             t-attf-class="form-control #{error.get('street_name') and 'is-invalid' or ''}"
                             t-att-value="'street_name' in checkout and checkout['street_name']"
                         />
@@ -184,7 +184,7 @@
                         <input
                             type="text"
                             name="street_number"
-                            style="background:RGBA(199,199,199, 0.5)"
+                            style="background:#FFF7EC"
                             t-attf-class="form-control #{error.get('street_number') and 'is-invalid' or ''}"
                             t-att-value="'street_number' in checkout and checkout['street_number']"
                         />
@@ -198,7 +198,7 @@
                         <input
                             type="text"
                             name="district"
-                            style="background:RGBA(199,199,199, 0.5)"
+                            style="background:#FFF7EC"
                             t-attf-class="form-control #{error.get('district') and 'is-invalid' or ''}"
                             t-att-value="'district' in checkout and checkout['district']"
                         />
@@ -226,7 +226,7 @@
                         <select
                             id="country_id"
                             name="country_id"
-                            style="background:RGBA(199,199,199, 0.5)"
+                            style="background:#FFF7EC"
                             t-attf-class="form-control #{error.get('country_id') and 'is-invalid' or ''}"
                             t-att-mode="mode[1]"
                         >
@@ -251,7 +251,7 @@
                         <select
                             id="state_id"
                             name="state_id"
-                            style="background:RGBA(199,199,199, 0.5)"
+                            style="background:#FFF7EC"
                             t-attf-class="form-control #{error.get('state_id') and 'is-invalid' or ''}"
                             data-init="1"
                         >
@@ -280,7 +280,7 @@
                         <select
                             name="city_id"
                             id="city_id"
-                            style="background:RGBA(199,199,199, 0.5)"
+                            style="background:#FFF7EC"
                             t-attf-class="form-control #{error.get('city_id') and 'is-invalid' or ''}"
                             t-att-style="(not country or not country.state_ids) and 'display: none'"
                         >
@@ -310,7 +310,7 @@
                             type="text"
                             name="city"
                             id="city"
-                            style="background:RGBA(199,199,199, 0.5)"
+                            style="background:#FFF7EC"
                             t-attf-class="form-control #{error.get('city') and 'is-invalid' or ''}"
                             t-att-value="'city' in checkout and checkout['city']"
                         />
