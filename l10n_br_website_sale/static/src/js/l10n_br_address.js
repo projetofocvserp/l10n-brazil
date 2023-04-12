@@ -28,6 +28,23 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
             },
         });
     }
+    // AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
+    $('#input_cnpj_cpf').keyup(function() {
+        if ($('#input_cnpj_cpf').val().replace(/\D/g,'').length <= 11) {
+            var cpf = $(this).val().replace(/\D/g, '');
+            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+            cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            $(this).val(cpf);
+        } else {
+            var cnpj = $(this).val().replace(/\D/g, '');
+            cnpj = cnpj.replace(/^(\d{2})(\d)/, '$1.$2');
+            cnpj = cnpj.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+            cnpj = cnpj.replace(/\.(\d{3})(\d)/, '.$1/$2');
+            cnpj = cnpj.replace(/(\d{4})(\d)/, '$1-$2');
+            $(this).val(cnpj);
+        }; 
+    });
     
     $("#radioCompany").click( function() {
         $("#id_cpf").text("CNPJ");
@@ -50,7 +67,7 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
         $("#id_mobile").attr("placeholder", "+55-(XX)-XXXXX-XXXX");
         $("#id_phone").attr("placeholder", "+55-XX-XXXXX-XXXX");    
         }, 1000);
-
+    // AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
     var zip_cleave = new Cleave(".input-zipcode", {
         blocks: [5, 3],
         delimiter: "-",
