@@ -41,7 +41,6 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
         $("#id_name").text("Nome Completo");
         $("#div_mobile").hide(), 100;
         $("#div_inscr_est").hide(), 100;
-        // required=false no inscr_est
     });
 
     $("#div_inscr_est").hide();
