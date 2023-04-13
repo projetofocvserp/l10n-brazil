@@ -161,7 +161,7 @@ class L10nBrWebsiteSale(WebsiteSale):
                 if "cnpj_cpf" not in error:
                     all_form_values["cnpj_cpf"] = data["cnpj_cpf"]
         # AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
-        if not data.get('inscr_est'):
+        if not data.get('inscr_est') and not data.get('company_type') == 'person':
             error["inscr_est"] = "error"
         # AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
         return error, error_message

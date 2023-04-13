@@ -53,7 +53,7 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
         $("#div_inscr_est").show();
         $("#div_mobile").show();
     };
-    
+
     setTimeout(function() {
         $("#id_mobile").attr("placeholder", "+55-(XX)-XXXXX-XXXX");
         $("#id_phone").attr("placeholder", "+55-XX-XXXXX-XXXX");    
