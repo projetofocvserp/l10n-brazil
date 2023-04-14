@@ -54,10 +54,6 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
         $("#div_mobile").show();
     };
 
-    setTimeout(function() {
-        $("#id_mobile").attr("placeholder", "+55-(XX)-XXXXX-XXXX");
-        $("#id_phone").attr("placeholder", "+55-XX-XXXXX-XXXX");    
-        }, 1000);
     // AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
     var zip_cleave = new Cleave(".input-zipcode", {
         blocks: [5, 3],
