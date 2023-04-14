@@ -42,22 +42,41 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
         $("#div_mobile").hide(), 100;
         $("#div_inscr_est").hide(), 100;
     });
-
-    $("#div_inscr_est").hide();
-    $("#div_mobile").hide();
-    $("#id_name").text("Nome Completo");
     
     $(document).ready(function() {
         if(!$('input[name="company_type"]:checked').length) {        
             $('input[name="company_type"][value="person"]').prop('checked', true);        
         }
+
         if($('input[name="company_type"]:checked').val() === "company") {      
             $("#id_cpf").text("CNPJ");
             $("#id_name").text("Razão Social");
             $("#div_inscr_est").show();
             $("#div_mobile").show();
+        } else {
+            $("#div_inscr_est").hide(); 
+            $("#div_mobile").hide();
+            $("#id_name").text("Nome Completo");
         }
+        
+        $('#id_mobile').keyup(function() {
+            var number = $(this).val().replace(/[^\d]/g, ''); // Remove all non-digits
+            if(number.length == 11) {
+                number = number.replace(/(\d{2})(\d{5})(\d{4})/, "+55 ($1) $2-$3"); // Format as +55 (11) 12345-6789
+                $(this).val(number);
+            }
+        });
+
+        $('#id_phone').keyup(function() {
+            var number = $(this).val().replace(/[^\d]/g, ''); // Remove all non-digits
+            if(number.length == 10) {
+                number = number.replace(/(\d{2})(\d{4})(\d{4})/, "+55 ($1) $2-$3"); // Format as +55 (11) 12345-6789
+                $(this).val(number);
+            }
+        });
     });
+
+
 
     // AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
     var zip_cleave = new Cleave(".input-zipcode", {
