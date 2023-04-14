@@ -46,14 +46,8 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
     $("#div_inscr_est").hide();
     $("#div_mobile").hide();
     $("#id_name").text("Nome Completo");
-
-    if ($('#radioCompany').prop('checked')) {
-        $("#id_cpf").text("CNPJ");
-        $("#id_name").text("Razão Social");
-        $("#div_inscr_est").show();
-        $("#div_mobile").show();
-    };
-
+    $("#radioPerson").prop("checked", true);
+    
     // AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
     var zip_cleave = new Cleave(".input-zipcode", {
         blocks: [5, 3],

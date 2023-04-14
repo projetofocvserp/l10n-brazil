@@ -5,6 +5,8 @@
         <form action="/shop/address" position="replace">
             <form action="/shop/address" method="post" class="checkout_autoformat">
                 <div class="form-row">
+                    <label style="color:red">*</label>
+                    <label style="font-size:12px;font-style:italic;">Campos obrigatórios</label>
                     <div
                         t-attf-class="form-group #{error.get('company_type') and 'o_has_error' or ''} col-xl-12 div_type"
                     >
@@ -94,11 +96,11 @@
                     >
                         <label class="col-form-label" for="inscr_est">Inscrição Estadual</label>
                         <label style="color:red">*</label>
+                        <label style="font-size:12px;font-style:italic;">se isento escrever ISENTO</label>
                         <input
                             type="text"
                             name="inscr_est"
                             style="background:#FFF7EC"
-                            placeholder="Se isento, escreva ISENTO"
                             t-attf-class="form-control #{error.get('inscr_est') and 'is-invalid' or ''}"
                             t-att-value="'inscr_est' in checkout and checkout['inscr_est']"
                         />
