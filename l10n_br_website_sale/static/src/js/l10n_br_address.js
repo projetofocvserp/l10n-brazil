@@ -51,6 +51,12 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
         if(!$('input[name="company_type"]:checked').length) {        
             $('input[name="company_type"][value="person"]').prop('checked', true);        
         }
+        if($('input[name="company_type"]:checked').val() === "company") {      
+            $("#id_cpf").text("CNPJ");
+            $("#id_name").text("Razão Social");
+            $("#div_inscr_est").show();
+            $("#div_mobile").show();
+        }
     });
 
     // AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
