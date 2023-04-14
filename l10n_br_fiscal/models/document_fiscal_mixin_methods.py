@@ -136,8 +136,7 @@ class FiscalDocumentMixinMethods(models.AbstractModel):
                 #     line.amount_untaxed + line.amount_tax + add_to_amount - rm_to_amount
                 # )
                 amount_total += (
-                    -line.amount_currency + 
-                    line.amount_tax_included + 
+                    (price_gross - line.discount_value) + 
                     line.amount_tax_not_included + 
                     add_to_amount - rm_to_amount
                 )
