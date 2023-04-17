@@ -1,0 +1,9 @@
+.required-label::after {
+    content: " *";
+    color: red;
+}
+.required-fields::after {
+    content: "Campos obrigatórios";
+;    font-size: 12px;
+    font-style: italic;
+}
