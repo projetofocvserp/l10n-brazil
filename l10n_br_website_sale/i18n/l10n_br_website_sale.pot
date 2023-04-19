@@ -4,8 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 14.0-20230217\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-18 20:35+0000\n"
+"PO-Revision-Date: 2023-04-18 20:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,18 +16,43 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.ax4b_confirmation
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.ax4b_payment
+msgid "&amp; Shipping/Licensing"
+msgstr "&amp; Entrega/Licenciamento"
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.ax4b_confirmation
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.ax4b_payment
+msgid "<b>Shipping/Licensing: </b>"
+msgstr "<b>Entrega/Licenciamento: </b>"
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
+msgid ""
+"<b>Warning</b>!In this form you are editing your <b>shipping/licensing address</b> at the same time!<br/>\n"
+"                            If you need to include a new shipping/licensing address that is different from your billing address, please create a"
+msgstr ""
+"<b>ATENÇÃO</b>!Nesse formulário você está editando o <b>endereço de Entrega/Licenciamento</b> ao mesmo tempo!<br/>\n"
+"                            Se você quer incluir um novo endereço de Entrega/Licenciamento diferente do seu endereço de Cobrança, por favor, crie um"
+
+#. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid ""
 "<i class=\"fa fa-chevron-left\"/>\n"
-"                            <span>Back</span>"
+"                        <span>Back</span>"
 msgstr ""
+"<i class=\"fa fa-chevron-left\"/>\n"
+"                        <span>Voltar</span>"
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid ""
 "<span>Next</span>\n"
-"                            <i class=\"fa fa-chevron-right\"/>"
+"                        <i class=\"fa fa-chevron-right\"/>"
 msgstr ""
+"<span>Próximo</span>\n"
+"                        <i class=\"fa fa-chevron-right\"/>"
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
@@ -33,8 +60,24 @@ msgid "Bairro"
 msgstr ""
 
 #. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.ax4b_confirmation
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.ax4b_payment
+msgid "Billing"
+msgstr "Cobrança"
+
+#. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
-msgid "CPF/CNPJ"
+msgid "CPF"
+msgstr ""
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
+msgid "Campos obrigatórios"
+msgstr ""
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
+msgid "Celular"
 msgstr ""
 
 #. module: l10n_br_website_sale
@@ -45,7 +88,7 @@ msgstr ""
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid "City"
-msgstr ""
+msgstr "Cidade"
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
@@ -55,26 +98,36 @@ msgstr ""
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid "Country"
-msgstr ""
+msgstr "País"
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid "Country..."
-msgstr ""
+msgstr "País…"
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid "Email"
+msgstr "E-mail"
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
+msgid "Inscrição Estadual"
 msgstr ""
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
+msgid "Log In"
+msgstr "Entrar"
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
-msgid "Nº"
+msgid "Número"
 msgstr ""
 
 #. module: l10n_br_website_sale
@@ -90,33 +143,40 @@ msgstr ""
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid "Phone"
-msgstr ""
+msgstr "Telefone"
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.ax4b_cart_summary
+msgid "Sign Up"
+msgstr "Cadastre-se"
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid ""
-"Ship to the same address\n"
-"                                    <span class=\"ship_to_other text-muted\" style=\"display: none\">\n"
-"                                        &amp;nbsp;(<i>Your shipping address\n"
-"                                        will be requested later) </i></span>"
+"Sign Up\n"
+"                                <small> or </small>"
+msgstr ""
+"Cadastre-se\n"
+"                                <small> ou </small>"
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.ax4b_sign_up
+msgid "Sign up"
+msgstr "Cadastrar-se"
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
+msgid "State"
 msgstr ""
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
-msgid ""
-"State /\n"
-"                            Province"
-msgstr ""
-
-#. module: l10n_br_website_sale
-#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
-msgid "State / Province..."
+msgid "State..."
 msgstr ""
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid "Street"
-msgstr ""
+msgstr "Endereço"
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
@@ -128,9 +188,36 @@ msgstr ""
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid "Zip Code"
+msgstr "CEP"
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
+msgid "new address"
+msgstr "Novo Endereço"
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
+msgid "se isento escrever ISENTO"
 msgstr ""
 
 #. module: l10n_br_website_sale
 #: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
 msgid "select..."
+msgstr "selecione..."
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.portal_address
+msgid ""
+"the billing address is the same as the shipping/licensing address <span "
+"class=\"ship_to_other text-muted\" style=\"display: none\"> "
+"&amp;nbsp;(<i>Registration of delivery/licensing address will be requested "
+"on the next page) </i></span>"
 msgstr ""
+"O endereço de cobrança é o mesmo endereço de Entrega/Licenciamento<span "
+"class=\"ship_to_other text-muted\" style=\"display: none\"> "
+"&amp;nbsp;(<i>O cadastro de endereço de entrega/licenciamento será solicitado na próxima página) </i></span>"
+
+#. module: l10n_br_website_sale
+#: model_terms:ir.ui.view,arch_db:l10n_br_website_sale.ax4b_cart_summary
+msgid "to follow your order."
+msgstr "Para acompanhar o(s) seu(s) pedido(s)"

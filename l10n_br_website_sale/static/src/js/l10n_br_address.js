@@ -11,24 +11,74 @@ odoo.define("l10n_br_website_sale.l10n_br_address", function (require) {
     if (!$checkout_autoformat_selector.length) {
         return $.Deferred().reject("DOM doesn't contain '.checkout_autoformat'");
     }
+    // AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
+    $('#input_cnpj_cpf').keyup(function() {
+        if ($('#input_cnpj_cpf').val().replace(/\D/g,'').length <= 11) {
+            var cpf = $(this).val().replace(/\D/g, '');
+            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+            cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+            cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            $(this).val(cpf);
+        } else {
+            var cnpj = $(this).val().replace(/\D/g, '');
+            cnpj = cnpj.replace(/^(\d{2})(\d)/, '$1.$2');
+            cnpj = cnpj.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+            cnpj = cnpj.replace(/\.(\d{3})(\d)/, '.$1/$2');
+            cnpj = cnpj.replace(/(\d{4})(\d)/, '$1-$2');
+            $(this).val(cnpj);
+        }; 
+    });
 
-    if ($("#input_cnpj_cpf").length) {
-        var cpf_cleave = new Cleave("#input_cnpj_cpf", {
-            blocks: [2, 3, 3, 4, 2],
-            delimiters: [".", ".", "-"],
-            numericOnly: true,
-            onValueChanged: function (e) {
-                if (e.target.rawValue.length > 11) {
-                    this.properties.blocks = [2, 3, 3, 4, 2];
-                    this.properties.delimiters = [".", ".", "/", "-"];
-                } else {
-                    this.properties.blocks = [3, 3, 3, 3];
-                    this.properties.delimiters = [".", ".", "-"];
-                }
-            },
+    $("#radioCompany").click( function() {
+        $("#id_cpf").text("CNPJ");
+        $("#id_name").text("Razão Social");
+        $("#div_inscr_est").show();
+        $("#div_mobile").show();
+    });
+
+    $("#radioPerson").click( function() {
+        $("#id_cpf").text("CPF");
+        $("#id_name").text("Nome Completo");
+        $("#div_mobile").hide(), 100;
+        $("#div_inscr_est").hide(), 100;
+    });
+    
+    $(document).ready(function() {
+        if(!$('input[name="company_type"]:checked').length) {        
+            $('input[name="company_type"][value="person"]').prop('checked', true);        
+        }
+
+        if($('input[name="company_type"]:checked').val() === "company") {      
+            $("#id_cpf").text("CNPJ");
+            $("#id_name").text("Razão Social");
+            $("#div_inscr_est").show();
+            $("#div_mobile").show();
+        } else {
+            $("#div_inscr_est").hide(); 
+            $("#div_mobile").hide();
+            $("#id_name").text("Nome Completo");
+        }
+        
+        $('#id_mobile').keyup(function() {
+            var number = $(this).val().replace(/[^\d]/g, ''); // Remove all non-digits
+            if(number.length == 11) {
+                number = number.replace(/(\d{2})(\d{5})(\d{4})/, "+55 ($1) $2-$3"); // Format as +55 (11) 12345-6789
+                $(this).val(number);
+            }
         });
-    }
 
+        $('#id_phone').keyup(function() {
+            var number = $(this).val().replace(/[^\d]/g, ''); // Remove all non-digits
+            if(number.length == 10) {
+                number = number.replace(/(\d{2})(\d{4})(\d{4})/, "+55 ($1) $2-$3"); // Format as +55 (11) 12345-6789
+                $(this).val(number);
+            }
+        });
+    });
+
+
+
+    // AX4B - FOCVS - ECOM_001- Tela de cadastro Pessoa física/Jurídica
     var zip_cleave = new Cleave(".input-zipcode", {
         blocks: [5, 3],
         delimiter: "-",
