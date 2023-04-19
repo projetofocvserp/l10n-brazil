@@ -1,0 +1,77 @@
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="ax4b_address" inherit_id="website_sale.address">
+       <!-- <xpath expr="//div[@class='col-12 col-xl order-xl-1 oe_cart'][1]/div[1]/t[1]" position="replace">
+        <t t-if="mode == ('new', 'billing')">
+            <h2 class="o_page_header mt8">Sign Up
+                <small> or </small>
+                <a role="button" href='/web/login?redirect=/shop/checkout' class='btn btn-primary' style="margin-top: -11px">Log In</a>
+            </h2>
+        </t> -->
+       <!-- </xpath>        
+        <xpath expr="//a[@class='btn btn-secondary mb32'][1]" position="replace">
+            <a role="button" t-att-href="mode == ('new', 'billing') and '/shop/cart' or '/shop/checkout'" class="btn btn-secondary mb32">
+                <i class="fa fa-chevron-left"/>
+                <span>Back</span>
+            </a>
+        </xpath>
+
+        <xpath expr="//a[@class='btn btn-primary mb32 a-submit a-submit-disable a-submit-loading'][1]" position="replace">
+            <a role="button" href="#" class="btn btn-primary mb32 a-submit a-submit-disable a-submit-loading">
+                <span>Next</span>
+                <i class="fa fa-chevron-right"/>
+            </a>
+        </xpath> -->
+        <!-- <xpath expr="//p[1]" position="replace">
+            <p  groups="sale.group_delivery_invoice_address">
+                <b>Warning</b>!In this form you are editing your <b>shipping/licensing address</b> at the same time!<br/>
+                If you need to include a new shipping/licensing address that is different from your billing address, please create a <a href='/shop/address'>new address</a>.
+            </p>
+        </xpath> -->
+    </template>
+    <!-- <template id="ax4b_confirmation" inherit_id="website_sale.confirmation">
+        <xpath expr="//div[@class='card-body'][1]" position="replace">
+            <div class="card-body">
+                <t t-set="same_shipping" t-value="bool(order.partner_shipping_id==order.partner_id or only_services)" />
+                <div><b>Billing <t t-if="same_shipping and not only_services"> &amp; Shipping/Licensing</t>: </b><span t-esc='order.partner_id' t-options="dict(widget='contact', fields=['address'], no_marker=True, separator=', ')" class="address-inline"/></div>
+                <div t-if="not same_shipping and not only_services" groups="sale.group_delivery_invoice_address"><b>Shipping/Licensing: </b><span t-esc='order.partner_shipping_id' t-options="dict(widget='contact', fields=['address'], no_marker=True, separator=', ')"  class="address-inline"/></div>
+              </div>
+        </xpath> 
+        <xpath expr="//t[3]" position="replace" display="none">
+        </xpath>
+    </template>
+
+
+    <template id="ax4b_payment" inherit_id="website_sale.payment">
+        <xpath expr="//div[@class='card-body'][1]" position="replace">
+            <div class="card-body">
+                <t t-set="same_shipping" t-value="bool(order.partner_shipping_id==order.partner_id or only_services)" />
+                <div><b>Billing <t t-if="same_shipping and not only_services"> &amp; Shipping/Licensing</t>: </b><span t-esc='order.partner_id' t-options="dict(widget='contact', fields=['address'], no_marker=True, separator=', ')" class="address-inline"/></div>
+                <div t-if="not same_shipping and not only_services" groups="sale.group_delivery_invoice_address"><b>Shipping/Licensing: </b><span t-esc='order.partner_shipping_id' t-options="dict(widget='contact', fields=['address'], no_marker=True, separator=', ')"  class="address-inline"/></div>
+              </div>
+        </xpath>
+    </template>
+
+
+    <template id="ax4b_sign_up" inherit_id="auth_signup.signup">
+        <xpath expr="//button[@class='btn btn-primary btn-block'][1]" position="replace">
+            <button type="submit" class="btn btn-primary btn-block"> Sign up</button>            
+        </xpath>
+    </template>
+
+
+    <template id="ax4b_cart_summary" inherit_id="website_sale.cart_summary">
+        <xpath expr="//div[@class='card'][1]" position="after">
+            <t t-if="request.env['res.users']._get_signup_invitation_scope() == 'b2c' and request.website.is_public_user() and request.httprequest.path == '/shop/confirmation'">
+                <p class="alert alert-info mt-3" role="status">
+                    <a role="button" t-att-href='website_sale_order.partner_id.signup_prepare() and website_sale_order.partner_id.with_context(relative_url=True).signup_url' class='btn btn-primary'>Sign Up</a>
+                     to follow your order.
+                </p>
+            </t>
+            <t t-else="">
+            </t>
+        </xpath>
+    </template> -->
+
+</odoo> -->
