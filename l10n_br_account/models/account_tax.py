@@ -162,6 +162,9 @@ class AccountTax(models.Model):
                         account_tax['amount'] = line.icms_value
                         account_tax['base'] = line.icms_base
 
+                        if move.fiscal_operation_type == 'out':
+                            account_tax['amount'] *= -1
+
             if fiscal_tax:
 
                 if fiscal_tax.get("base") < 0:

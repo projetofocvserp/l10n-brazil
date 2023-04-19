@@ -643,8 +643,9 @@ class NFeLine(spec_models.StackedModel):
             "nfe40_PISOutr": ["nfe40_PISAliq", "nfe40_PISQtde", "nfe40_PISNT"],
         }
 
-        for tag_to_remove in remove_tags.get(self.nfe40_choice12):
-            xsd_fields.remove(tag_to_remove)
+        if remove_tags.get(self.nfe40_choice12):
+            for tag_to_remove in remove_tags.get(self.nfe40_choice12):
+                xsd_fields.remove(tag_to_remove)
 
     def _export_fields_pis(self, xsd_fields, class_obj, export_dict):
 
@@ -768,8 +769,9 @@ class NFeLine(spec_models.StackedModel):
             ],
         }
 
-        for tag_to_remove in remove_tags.get(self.nfe40_choice15):
-            xsd_fields.remove(tag_to_remove)
+        if remove_tags.get(self.nfe40_choice15):
+            for tag_to_remove in remove_tags.get(self.nfe40_choice15):
+                xsd_fields.remove(tag_to_remove)
 
     def _export_fields_cofins(self, xsd_fields, class_obj, export_dict):
 
