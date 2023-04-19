@@ -42,6 +42,7 @@ class AccountTax(models.Model):
         icmssn_range=None,
         icms_origin=None,
         ind_final=FINAL_CUSTOMER_NO,
+        move=None,
     ):
         """Returns all information required to apply taxes
             (in self + their children in case of a tax goup).
@@ -131,7 +132,7 @@ class AccountTax(models.Model):
         for tax in self:
             tax_domain = tax.tax_group_id.fiscal_tax_group_id.tax_domain
             account_taxes_by_domain.update({tax.id: tax_domain})
-
+        
         for account_tax in taxes_results["taxes"]:
             tax = self.filtered(lambda t: t.id == account_tax.get("id"))
             fiscal_tax = fiscal_taxes_results["taxes"].get(
@@ -152,6 +153,14 @@ class AccountTax(models.Model):
             ).filtered(lambda x: x.repartition_type == "tax")
 
             sum_repartition_factor = sum(tax_repartition_lines.mapped("factor"))
+            
+            if move:
+                tax_id = self.env['account.tax'].browse(account_tax['id']).fiscal_tax_ids.id
+
+                for line in move.line_ids:
+                    if line.icms_tax_id.id == tax_id:
+                        account_tax['amount'] = line.icms_value
+                        account_tax['base'] = line.icms_base
 
             if fiscal_tax:
 
