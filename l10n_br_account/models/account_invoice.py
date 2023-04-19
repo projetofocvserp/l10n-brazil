@@ -416,6 +416,7 @@ class AccountMove(models.Model):
             uot_id=base_line.uot_id,
             icmssn_range=base_line.icmssn_range_id,
             icms_origin=base_line.icms_origin,
+            move=self,
         )
 
         return balance_taxes_res
@@ -424,6 +425,8 @@ class AccountMove(models.Model):
         """Useful in case we want to pre-process taxes_map"""
 
         taxes_mapped = super()._preprocess_taxes_map(taxes_map=taxes_map)
+        
+        is_first_iteration = True
 
         for line in self.line_ids.filtered(
             lambda line: not line.tax_repartition_line_id
@@ -443,14 +446,22 @@ class AccountMove(models.Model):
                     tax_vals["tax_repartition_line_id"]
                 )
 
-                # if taxes_mapped[grouping_key]:
-                    # taxes_mapped[grouping_key]["amount"] += tax_vals["amount"]
-                    # taxes_mapped[grouping_key][
-                        # "tax_base_amount"
-                    # ] += self._get_base_amount_to_display(
-                        # tax_vals["base"], tax_repartition_line, tax_vals["group"]
-                    # )
-
+                if taxes_mapped[grouping_key]:
+                    if is_first_iteration:
+                        taxes_mapped[grouping_key]["amount"] = tax_vals["amount"]
+                        taxes_mapped[grouping_key][
+                            "tax_base_amount"
+                        ] = self._get_base_amount_to_display(
+                            tax_vals["base"], tax_repartition_line, tax_vals["group"]
+                        )
+                    else:
+                        taxes_mapped[grouping_key]["amount"] += tax_vals["amount"]
+                        taxes_mapped[grouping_key][
+                            "tax_base_amount"
+                        ] += self._get_base_amount_to_display(
+                            tax_vals["base"], tax_repartition_line, tax_vals["group"]
+                        )
+            is_first_iteration = False
         return taxes_mapped
 
     def _recompute_payment_terms_lines(self):

@@ -398,7 +398,12 @@ class AccountMoveLine(models.Model):
             sign = 1
 
         amount_currency = self.price_total * sign
-        calculated_amount_without_taxes = amount_currency + self.amount_tax_not_included + self.amount_tax_included
+        
+        if self.move_id.fiscal_operation_type == 'out':
+            calculated_amount_without_taxes = amount_currency + self.amount_tax_not_included + self.amount_tax_included
+        else:
+            calculated_amount_without_taxes = amount_currency - self.amount_tax_not_included - self.amount_tax_included
+
         balance = currency._convert(
             calculated_amount_without_taxes, 
             company.currency_id,
