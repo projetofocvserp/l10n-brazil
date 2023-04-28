@@ -7,6 +7,7 @@ from odoo import http
 from odoo.http import request
 
 from odoo.addons.website_sale.controllers.main import WebsiteSale
+from werkzeug.exceptions import Forbidden
 
 _logger = logging.getLogger(__name__)
 try:
