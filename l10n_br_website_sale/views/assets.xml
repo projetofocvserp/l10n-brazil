@@ -11,31 +11,10 @@
                 type="text/javascript"
                 src="/l10n_br_website_sale/static/src/js/l10n_br_address.js"
             />
-            <!-- <script
-                type="text/javascript"
-                src="/l10n_br_website_sale/static/src/js/l10n_br_phone_placeholder.js"
-            /> -->
             <script
                 type="text/javascript"
                 src="/l10n_br_website_sale/static/src/js/l10n_br_website_sale_tour.js"
             />
-            <!-- <script 
-                type="text/javascript" 
-                src="/l10n_br_website_sale/static/src/js/l10n_br_website_sale.js"/> -->
         </xpath>
     </template>
-    <!-- <template
-        id="ax4b_sale_address"
-        inherit_id="website_sale.address"
-        name="Ax4b Website sale"
-        priority="16"
-    >
-    <xpath expr="//head[1]" position="inside">
-    
-        
-    </xpath>
-    
-    
-    </template> -->
-
 </odoo>

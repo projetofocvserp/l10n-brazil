@@ -33,7 +33,7 @@ msgid ""
 "<b>Warning</b>!In this form you are editing your <b>shipping/licensing address</b> at the same time!<br/>\n"
 "                If you need to include a new shipping/licensing address that is different from your billing address, please create a"
 msgstr ""
-"<b>ATENÇÃO</b>!Nesse formulário você está editando o <b>endereço de Entrega/Licenciamento</b> ao mesmo tempo!<br/>\n"
+"<b>ATENÇÃO</b>! Nesse formulário você está editando o <b>endereço de Entrega/Licenciamento</b> ao mesmo tempo!<br/>\n"
 "                            Se você quer incluir um novo endereço de Entrega/Licenciamento diferente do seu endereço de Cobrança, por favor, crie um"
 
 #. module: l10n_br_website_sale
