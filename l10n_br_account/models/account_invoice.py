@@ -115,6 +115,11 @@ class AccountMove(models.Model):
     # to have the same value as the native incoterm of the invoice.
     incoterm_id = fields.Many2one(related="invoice_incoterm_id")
 
+    amount_financial_total = fields.Monetary(
+        string="Amount Financial",
+        compute="_compute_amount",
+        store=True,
+    )
     def _compute_fiscal_operation_type(self):
         for inv in self:
             if inv.move_type == "entry":
@@ -209,7 +214,6 @@ class AccountMove(models.Model):
 
             # Atualização com os valores Brasileiros
             move.update(values)
-            return
 
     @api.model
     def _shadowed_fields(self):
