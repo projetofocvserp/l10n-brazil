@@ -147,18 +147,19 @@ class FiscalDocumentMixinMethods(models.AbstractModel):
                 ) - line.amount_tax_withholding
 
                 # Valor financeiro
-                if (
-                    line.fiscal_operation_line_id
-                    and line.fiscal_operation_line_id.add_to_amount
-                    and (not line.cfop_id or line.cfop_id.finance_move)
-                ):
-
+                # if (
+                #     line.fiscal_operation_line_id
+                #     and line.fiscal_operation_line_id.add_to_amount
+                #     and (not line.cfop_id or line.cfop_id.finance_move)
+                # ):
+                
+                if line.fiscal_operation_type == 'in':
                     financial_total += amount_taxed
-                    financial_total_gross += amount_taxed + line.discount_value
-                    financial_discount_value += line.discount_value
                 else:
-                    financial_total_gross = financial_total = 0.0
-                    financial_discount_value = 0.0
+                    financial_total += amount_taxed + line.amount_tax_withholding
+                
+                financial_total_gross += financial_total + line.discount_value
+                financial_discount_value += line.discount_value
 
                 amount_freight_value += line.freight_value
                 amount_insurance_value += line.insurance_value

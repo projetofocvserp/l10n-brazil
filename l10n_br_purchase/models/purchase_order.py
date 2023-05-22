@@ -106,7 +106,8 @@ class PurchaseOrder(models.Model):
 
     @api.depends("order_line.price_total")
     def _amount_all(self):
-        self._compute_amount()
+        for order in self:
+            order._compute_amount()
 
     def _prepare_invoice(self):
         self.ensure_one()

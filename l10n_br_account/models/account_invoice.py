@@ -209,6 +209,7 @@ class AccountMove(models.Model):
 
             # Atualização com os valores Brasileiros
             move.update(values)
+            return
 
     @api.model
     def _shadowed_fields(self):
