@@ -283,7 +283,8 @@ class NFeLine(spec_models.StackedModel):
     nfe40_vTotTrib = fields.Monetary(related="estimate_tax")
 
     def _export_fields_nfe_40_imposto(self, xsd_fields, class_obj, export_dict):
-
+        
+        self._compute_nfe40_choice10()
         if self.nfe40_choice10 == "nfe40_ICMS":
             xsd_fields.remove("nfe40_ISSQN")
         else:
@@ -435,6 +436,7 @@ class NFeLine(spec_models.StackedModel):
         if "nfe40_ICMSST" in xsd_fields:
             xsd_fields.remove("nfe40_ICMSST")
 
+        self._compute_choice11()
         xsd_fields = [self.nfe40_choice11]
         icms_tag = self.nfe40_choice11.replace("nfe40_", "")  # FIXME
         binding_module = sys.modules[self._binding_module]
@@ -550,6 +552,8 @@ class NFeLine(spec_models.StackedModel):
 
         self._export_fields_ipi(xsd_fields, class_obj, export_dict)
 
+        self._compute_nfe40_choice20()
+
         if self.nfe40_choice20 == "nfe40_pIPI":
             xsd_fields.remove("nfe40_qUnid")
             xsd_fields.remove("nfe40_vUnid")
@@ -642,7 +646,7 @@ class NFeLine(spec_models.StackedModel):
             "nfe40_PISNT": ["nfe40_PISAliq", "nfe40_PISQtde", "nfe40_PISOutr"],
             "nfe40_PISOutr": ["nfe40_PISAliq", "nfe40_PISQtde", "nfe40_PISNT"],
         }
-
+        self._compute_choice12()
         for tag_to_remove in remove_tags.get(self.nfe40_choice12):
             xsd_fields.remove(tag_to_remove)
 
@@ -767,7 +771,7 @@ class NFeLine(spec_models.StackedModel):
                 "nfe40_COFINSNT",
             ],
         }
-
+        self._compute_choice15()
         for tag_to_remove in remove_tags.get(self.nfe40_choice15):
             xsd_fields.remove(tag_to_remove)
 
