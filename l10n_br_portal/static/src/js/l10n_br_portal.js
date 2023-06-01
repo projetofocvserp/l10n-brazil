@@ -10,19 +10,35 @@ odoo.define("l10n_br_portal.l10n_br_portal", function (require) {
         return $.Deferred().reject("DOM doesn't contain '.o_portal'");
     }
 
-    var cleaveCNPJ = new Cleave(".input-cnpj-cpf", {
-        blocks: [2, 3, 3, 4, 2],
-        delimiters: [".", ".", "-"],
+    document.querySelector(".input-cnpj-cpf").addEventListener("input", function (e) {
+        var input = e.target,
+            value = input.value.replace(/\D/g, ""),
+            newValue = "";
+
+        if (value.length <= 11) {
+            // 539.211.430-04 Mock data
+            newValue += value.slice(0, 3);
+            newValue += value.slice(3, 6) ? "." + value.slice(3, 6) : "";
+            newValue += value.slice(6, 9) ? "." + value.slice(6, 9) : "";
+            newValue += value.slice(9, 11) ? "-" + value.slice(9, 11) : "";
+            input.style.backgroundColor = "#ffebb463";
+        } else {
+            // 75.676.430/0001-27 Mock data
+            newValue += value.slice(0, 2);
+            newValue += value.slice(2, 5) ? "." + value.slice(2, 5) : "";
+            newValue += value.slice(5, 8) ? "." + value.slice(5, 8) : "";
+            newValue += value.slice(8, 12) ? "/" + value.slice(8, 12) : "";
+            newValue += value.slice(12, 14) ? "-" + value.slice(12, 14) : "";
+            input.style.backgroundColor = "#ffebb48e";
+        }
+
+        input.value = newValue;
+    });
+
+    var cleaveZipCode = new Cleave(".input-zipcode", {
+        blocks: [5, 3],
+        delimiter: "-",
         numericOnly: true,
-        onValueChanged: function (e) {
-            if (e.target.rawValue.length > 11) {
-                this.properties.blocks = [2, 3, 3, 4, 2];
-                this.properties.delimiters = [".", ".", "/", "-"];
-            } else {
-                this.properties.blocks = [3, 3, 3, 3];
-                this.properties.delimiters = [".", ".", "-"];
-            }
-        },
     });
 
     var cleaveZipCode = new Cleave(".input-zipcode", {
