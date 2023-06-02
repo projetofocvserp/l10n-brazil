@@ -15,10 +15,8 @@ class L10nBrPortal(CustomerPortal):
         "city_id",
         "district",
         "street_number",
-        "legal_name",
         "cnpj_cpf",
         "zipcode",
-        "inscr_est",
         "street_name",
     ]
     OPTIONAL_BILLING_FIELDS = list(
