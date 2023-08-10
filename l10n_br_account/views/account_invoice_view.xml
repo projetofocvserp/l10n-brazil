@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
     <record id="invoice_search" model="ir.ui.view">
@@ -14,7 +14,9 @@
             <field name="name" position="attributes">
                 <attribute
                     name="filter_domain"
-                >['|','|','|', '|', ('document_number','ilike',self), ('name','ilike',self), ('invoice_origin','ilike',self), ('ref', 'ilike', self), ('partner_id', 'child_of', self)]</attribute>
+                >['|','|','|', '|', ('document_number','ilike',self),
+                    ('name','ilike',self), ('invoice_origin','ilike',self), ('ref', 'ilike', self),
+                    ('partner_id', 'child_of', self)]</attribute>
                 <attribute name="string">Account Number</attribute>
             </field>
         </field>
@@ -169,14 +171,18 @@
 
             <!-- invoice_line_ids tree (Invoice Lines) -->
             <xpath expr="//field[@name='invoice_line_ids']/tree" position="attributes">
-              <attribute
+                <attribute
                     name="editable"
                 /><!-- TODO put this in a view with a specific group? -->
             </xpath>
             <xpath expr="//field[@name='invoice_line_ids']" position="attributes">
                 <attribute
                     name="context"
-                >{'default_move_type': context.get('default_move_type'), 'journal_id': journal_id, 'default_partner_id': commercial_partner_id, 'default_currency_id': currency_id or company_currency_id, 'default_fiscal_operation_id': fiscal_operation_id, 'default_document_type_id': document_type_id}</attribute>
+                >{'default_move_type': context.get('default_move_type'),
+                    'journal_id': journal_id, 'default_partner_id': commercial_partner_id,
+                    'default_currency_id': currency_id or company_currency_id,
+                    'default_fiscal_operation_id': fiscal_operation_id, 'default_document_type_id':
+                    document_type_id}</attribute>
             </xpath>
             <xpath
                 expr="//field[@name='invoice_line_ids']/tree/field[@name='tax_ids']"
@@ -226,7 +232,12 @@
             <xpath expr="//field[@name='line_ids']" position="attributes">
                 <attribute
                     name="context"
-                >{'default_move_type': context.get('default_move_type'), 'line_ids': line_ids, 'journal_id': journal_id, 'default_partner_id': commercial_partner_id, 'default_currency_id': currency_id or company_currency_id, 'default_fiscal_operation_id': fiscal_operation_id, 'default_document_type_id': document_type_id, 'default_exclude_from_invoice_tab': 1}</attribute>
+                >{'default_move_type': context.get('default_move_type'),
+                    'line_ids': line_ids, 'journal_id': journal_id, 'default_partner_id':
+                    commercial_partner_id, 'default_currency_id': currency_id or
+                    company_currency_id, 'default_fiscal_operation_id': fiscal_operation_id,
+                    'default_document_type_id': document_type_id,
+                    'default_exclude_from_invoice_tab': 1}</attribute>
             </xpath>
             <xpath
                 expr="//field[@name='line_ids']/tree/field[@name='tax_ids']"
@@ -255,7 +266,7 @@
                 <field name="uom_id" optional="hide" />
                 <field name="fiscal_genre_id" optional="hide" />
                 <field name="partner_company_type" invisible="1" />
-                    <field name="fiscal_operation_type" invisible="1" />
+                <field name="fiscal_operation_type" invisible="1" />
                 <field
                     name="fiscal_tax_ids"
                     invisible="1"
@@ -263,22 +274,23 @@
                     widget="many2many_tags"
                     options="{'no_create': True}"
                 />
-                            <field name="fiscal_quantity" invisible="1" />
-                            <field name="uot_id" invisible="1" />
-                            <field name="fiscal_price" invisible="1" />
-                            <field name="discount_value" invisible="1" />
+                <field name="fiscal_quantity" invisible="1" />
+                <field name="uot_id" invisible="1" />
+                <field name="fiscal_price" invisible="1" />
+                <field name="discount_value" invisible="1" />
 
-                    <!--group name="fiscal_fields" invisible="1" /-->
+                <!--group
+                name="fiscal_fields" invisible="1" /-->
 
-                    <field name="freight_value" invisible="1" />
-                    <field name="insurance_value" invisible="1" />
-                    <field name="other_value" invisible="1" />
-                    <field name="estimate_tax" invisible="1" />
+                <field name="freight_value" invisible="1" />
+                <field name="insurance_value" invisible="1" />
+                <field name="other_value" invisible="1" />
+                <field name="estimate_tax" invisible="1" />
 
-                  <!-- TODO adapt these placeholders for tree view for fiscal_form_view -->
-                    <control name="fiscal_taxes_fields" string="Taxes" invisible="1" />
-                    <field name="tax_icms_or_issqn" invisible="1" />
-                    <control
+                <!-- TODO adapt these placeholders for tree view for fiscal_form_view -->
+                <control name="fiscal_taxes_fields" string="Taxes" invisible="1" />
+                <field name="tax_icms_or_issqn" invisible="1" />
+                <control
                     name="fiscal_line_extra_info_fields"
                     string="Extra Info"
                     invisible="1"
@@ -287,18 +299,24 @@
 
 
             <!-- invoice_line_ids form -->
-           <xpath
+            <xpath
                 expr="//field[@name='invoice_line_ids']/form/sheet/group/field[@name='tax_ids']"
                 position="attributes"
             >
                 <attribute
                     name="domain"
-                >[('type_tax_use', '=?', parent.invoice_filter_type_domain), ('company_id', '=', parent.company_id)]</attribute>
+                >[('type_tax_use', '=?', parent.invoice_filter_type_domain),
+                    ('company_id', '=', parent.company_id)]</attribute>
                 <attribute
                     name="context"
                 >{'append_type_to_tax_name': not parent.invoice_filter_type_domain}</attribute>
                 <attribute name="options">{'no_create': True}</attribute>
                 <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_line_ids']/form/sheet/group/field[@name='analytic_account_id']"
+                position="after">
+                <field name="asset_profile_id" />
             </xpath>
 
             <xpath
@@ -365,7 +383,10 @@
             >
                 <attribute
                     name="domain"
-                >context.get('default_move_type') in ('out_invoice', 'out_refund', 'out_receipt') and [('sale_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)] or [('purchase_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]</attribute>
+                >context.get('default_move_type') in ('out_invoice', 'out_refund',
+                    'out_receipt') and [('sale_ok', '=', True), '|', ('company_id', '=', False),
+                    ('company_id', '=', parent.company_id)] or [('purchase_ok', '=', True), '|',
+                    ('company_id', '=', False), ('company_id', '=', parent.company_id)]</attribute>
             </xpath>
 
             <xpath
@@ -375,7 +396,9 @@
                 <attribute name="groups">account.group_account_readonly</attribute>
                 <attribute
                     name="domain"
-                >[('deprecated', '=', False), ('user_type_id.type', 'not in', ('receivable', 'payable')), ('company_id', '=', parent.company_id), ('is_off_balance', '=', False)]</attribute>
+                >[('deprecated', '=', False), ('user_type_id.type', 'not in',
+                    ('receivable', 'payable')), ('company_id', '=', parent.company_id),
+                    ('is_off_balance', '=', False)]</attribute>
                 <attribute
                     name="attrs"
                 >{'required': [('display_type', '=', False)]}</attribute>
@@ -388,7 +411,8 @@
                 <attribute name="groups">analytic.group_analytic_accounting</attribute>
                 <attribute
                     name="domain"
-                >['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]</attribute>
+                >['|', ('company_id', '=', False), ('company_id', '=',
+                    parent.company_id)]</attribute>
             </xpath>
 
             <xpath
@@ -397,7 +421,8 @@
             >
                 <attribute
                     name="domain"
-                >['|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]</attribute>
+                >['|', ('company_id', '=', False), ('company_id', '=',
+                    parent.company_id)]</attribute>
                 <attribute name="groups">analytic.group_analytic_tags</attribute>
             </xpath>
 
@@ -462,7 +487,7 @@
                     name="nbs_id"
                     attrs="{'invisible': ['|', ('document_type_id', '=', False), ('tax_icms_or_issqn', '=', 'icms')]}"
                 />
-              </xpath>
+            </xpath>
 
             <xpath
                 expr="//field[@name='invoice_line_ids']/form/sheet/field[@name='name']"
