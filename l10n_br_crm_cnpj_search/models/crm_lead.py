@@ -13,6 +13,11 @@ class Lead(models.Model):
         column2="cnae_id",
     )
 
+    legal_nature = fields.Many2one(
+        comodel_name="l10n_br_fiscal.legal_nature",
+        string="Legal Nature",
+    )
+
     def _prepare_customer_values(self, name, is_company, parent_id=False):
         self.ensure_one()
         values = super()._prepare_customer_values(name, is_company, parent_id)
