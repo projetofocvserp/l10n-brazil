@@ -3,9 +3,7 @@
 from . import data_abstract
 from . import data_product_abstract
 from . import data_ncm_nbs_abstract
-from . import document_mixin_methods
 from . import document_mixin
-from . import document_line_mixin_methods
 from . import document_line_mixin
 from . import invalidate_number
 from . import comment
@@ -53,4 +51,7 @@ from . import res_country_state
 from . import uom_uom
 from . import operation_dashboard
 from . import city_taxation_code
+from . import national_taxation_code
 from . import document_supplement
+from . import tax_classification
+from . import operation_indicator

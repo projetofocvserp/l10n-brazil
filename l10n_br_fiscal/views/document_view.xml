@@ -295,10 +295,20 @@
                         <page name="products" string="Products and Services">
                             <field
                                 name="fiscal_line_ids"
-                                context="{'form_view_ref': 'l10n_br_fiscal.document_line_form', 'default_document_id': id, 'default_company_id': company_id, 'default_partner_id': partner_id, 'default_fiscal_operation_type': fiscal_operation_type, 'default_fiscal_operation_id': fiscal_operation_id, 'no_subcall': True}"
+                                context="{
+                                    'form_view_ref': 'l10n_br_fiscal.document_line_form',
+                                    'default_document_id': id,
+                                    'default_company_id': company_id,
+                                    'default_partner_id': partner_id,
+                                    'default_fiscal_operation_type': fiscal_operation_type,
+                                    'default_fiscal_operation_id': fiscal_operation_id,
+                                    'default_ind_final': ind_final,
+                                    'no_subcall': True,
+                                }"
                             >
                                 <tree>
                                     <field name="product_id" />
+                                    <field name="name" />
                                     <field name="uom_id" />
                                     <field name="price_unit" />
                                     <field name="quantity" />
@@ -323,6 +333,14 @@
                         <page name="amounts" string="Amounts">
                             <group>
                                 <group>
+                                    <group string="IBS">
+                                        <field name="amount_ibs_base" />
+                                        <field name="amount_ibs_value" />
+                                    </group>
+                                    <group string="CBS">
+                                        <field name="amount_cbs_base" />
+                                        <field name="amount_cbs_value" />
+                                    </group>
                                     <group string="ICMS">
                                         <field name="amount_icms_base" />
                                         <field name="amount_icms_value" />
@@ -336,6 +354,11 @@
                                     <group string="ICMS ST">
                                         <field name="amount_icmsst_base" />
                                         <field name="amount_icmsst_value" />
+                                    </group>
+                                    <group string="II">
+                                        <field name="amount_ii_base" />
+                                        <field name="amount_ii_value" />
+                                        <field name="amount_ii_customhouse_charges" />
                                     </group>
                                     <group string="IPI">
                                         <field name="amount_ipi_base" />

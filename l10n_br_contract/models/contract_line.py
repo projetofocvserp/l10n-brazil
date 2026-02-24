@@ -41,19 +41,10 @@ class ContractLine(models.Model):
 
     line_recurrence = fields.Boolean(related="contract_id.line_recurrence")
 
-    def _get_fiscal_tax_ids_dependencies(self):
-        fields = super()._get_fiscal_tax_ids_dependencies()
-        fields.remove("company_id")
-        return fields
-
     def _prepare_invoice_line(self):
         self.ensure_one()
 
         contract = self.contract_id
-
-        if contract.contract_recalculate_taxes_before_invoice:
-            self._onchange_fiscal_operation_id()
-
         invoice_line_vals = super()._prepare_invoice_line()
 
         # Por algum motivo com a localização o campo company_currency_id

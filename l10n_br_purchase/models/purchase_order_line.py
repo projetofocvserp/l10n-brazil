@@ -24,8 +24,6 @@ class PurchaseOrderLine(models.Model):
     # Adapt Mixin's fields
     fiscal_operation_id = fields.Many2one(
         comodel_name="l10n_br_fiscal.operation",
-        readonly=True,
-        states={"draft": [("readonly", False)]},
         default=_default_fiscal_operation,
         domain=lambda self: self._fiscal_operation_domain(),
     )
@@ -36,16 +34,6 @@ class PurchaseOrderLine(models.Model):
         string="Operation Line",
         domain="[('fiscal_operation_id', '=', fiscal_operation_id), "
         "('state', '=', 'approved')]",
-    )
-
-    # overriden to disable precompute as it depends on price_unit which is not
-    # precompute in the purchase module. We don't need precompute in purchase.
-    fiscal_price = fields.Float(
-        precompute=False,
-    )
-
-    price_unit = fields.Float(
-        precompute=False,
     )
 
     quantity = fields.Float(
@@ -79,18 +67,6 @@ class PurchaseOrderLine(models.Model):
         related="company_id.delivery_costs",
     )
 
-    def _get_fiscal_tax_ids_dependencies(self):
-        fields = super()._get_fiscal_tax_ids_dependencies()
-        fields.remove("company_id")
-        fields.remove("partner_id")
-        return fields
-
-    def _get_tax_fields_dependencies(self):
-        fields = super()._get_tax_fields_dependencies()
-        fields.remove("price_unit")
-        fields.remove("fiscal_price")
-        return fields
-
     @api.depends(
         "product_uom_qty",
         "price_unit",
@@ -107,7 +83,6 @@ class PurchaseOrderLine(models.Model):
         result = super()._compute_amount()
         for line in self:
             if line.fiscal_operation_id:
-                line._compute_tax_fields()  # TODO is it required?
                 line.update(
                     {
                         "price_subtotal": line.fiscal_amount_untaxed,
@@ -148,6 +123,11 @@ class PurchaseOrderLine(models.Model):
             if line.fiscal_operation_id:
                 # O caso Brasil se caracteriza por ter a Operação Fiscal
                 fiscal_values = line._prepare_br_fiscal_dict()
+                # fiscal_quantity must not be copied from PO line because
+                # the invoice quantity may differ (e.g. partial receipt).
+                # Let _compute_fiscal_quantity recompute it from the
+                # invoice line quantity, same approach as l10n_br_sale.
+                fiscal_values.pop("fiscal_quantity", None)
                 fiscal_values.update(values)
                 values.update(fiscal_values)
 
@@ -161,6 +141,32 @@ class PurchaseOrderLine(models.Model):
                 partner.address_get(["invoice"]).get("invoice")
             )
         return partner
+
+    def _setup_complete(self):
+        # /!\ LOW-LEVEL OVERRIDE (registry setup) /!\
+        # The BR fiscal mixin uses many fields with precompute=True,
+        # but purchase does not have all dependencies ready at create time.
+        # Since we have hundreds of fields, instead of overriding each one,
+        # we set precompute=False dynamically here.
+        res = super()._setup_complete()
+        mixin = self.env["l10n_br_fiscal.document.line.mixin"]
+        mixin_fields = mixin._fields
+        for name, field in self._fields.items():
+            mixin_field = mixin_fields.get(name)
+            if not mixin_field:
+                continue
+            if mixin_field.compute in (
+                "_compute_price_unit_fiscal",
+                "_compute_product_fiscal_fields",
+                "_compute_fiscal_quantity",
+                "_compute_fiscal_price",
+                "_compute_fiscal_tax_ids",
+                "_compute_tax_fields",
+                "_compute_fiscal_operation_line_id",
+                "_compute_comment_ids",
+            ) and getattr(mixin_field, "precompute", False):
+                field.precompute = False
+        return res
 
     @api.model
     def _get_total_for_tax_totals(self):

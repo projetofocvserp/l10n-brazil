@@ -4,16 +4,16 @@
 {
     "name": "NFS-e",
     "summary": "Root electronic invoice for service / NFS-e module",
-    "version": "16.0.5.1.0",
+    "version": "16.0.7.0.1",
     "license": "AGPL-3",
     "author": "KMEE, Odoo Community Association (OCA)",
     "maintainers": ["mileo", "luismalta", "marcelsavegnago"],
     "website": "https://github.com/OCA/l10n-brazil",
     "external_dependencies": {
         "python": [
-            "erpbrasil.edoc>=2.5.2",
-            "erpbrasil.transmissao>=1.1.0",
-            "erpbrasil.base>=2.3.0",
+            "erpbrasil.edoc",
+            "erpbrasil.transmissao",
+            "erpbrasil.base",
         ],
     },
     "depends": [

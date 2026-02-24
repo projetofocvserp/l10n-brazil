@@ -13,11 +13,12 @@
     "author": "Engenere," "Akretion," "Odoo Community Association (OCA)",
     "maintainers": ["antoniospneto", "felipemotter", "mbcosta"],
     "website": "https://github.com/OCA/l10n-brazil",
-    "version": "16.0.5.5.1",
+    "version": "16.0.8.0.0",
     "development_status": "Beta",
     "depends": [
         "l10n_br_nfe",
         "l10n_br_account",
+        "l10n_br_account_due_list",
         "account_payment_partner",
     ],
     "data": [

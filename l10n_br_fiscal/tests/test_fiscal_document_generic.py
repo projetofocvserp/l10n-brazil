@@ -44,9 +44,6 @@ class TestFiscalDocumentGeneric(TransactionCase):
             # as the product change might have altered it.
             line.price_unit = 100
 
-            line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_taxes()
-
             if "Revenda" in line.fiscal_operation_line_id.name:
                 self.assertEqual(
                     line.cfop_id.code,
@@ -111,7 +108,7 @@ class TestFiscalDocumentGeneric(TransactionCase):
             else:
                 self.assertEqual(
                     line.ipi_tax_id.name,
-                    "IPI 3.25%",
+                    "IPI 3,25%",
                     "Error to mapping IPI 5%"
                     " for Venda de Contribuinte Dentro do Estado.",
                 )
@@ -161,9 +158,6 @@ class TestFiscalDocumentGeneric(TransactionCase):
     def test_nfe_other_state(self):
         """Test NFe other state."""
         for line in self.nfe_other_state.fiscal_line_ids:
-            line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_taxes()
-
             if "Revenda" in line.fiscal_operation_line_id.name:
                 self.assertEqual(
                     line.cfop_id.code,
@@ -231,7 +225,7 @@ class TestFiscalDocumentGeneric(TransactionCase):
             else:
                 self.assertEqual(
                     line.ipi_tax_id.name,
-                    "IPI 3.25%",
+                    "IPI 3,25%",
                     "Error to mapping IPI 5%"
                     " for Venda de Contribuinte Dentro do Estado.",
                 )
@@ -275,9 +269,6 @@ class TestFiscalDocumentGeneric(TransactionCase):
     def test_nfe_not_taxpayer(self):
         """Test NFe not taxpayer."""
         for line in self.nfe_not_taxpayer.fiscal_line_ids:
-            line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_taxes()
-
             if "Revenda" in line.fiscal_operation_line_id.name:
                 self.assertEqual(
                     line.cfop_id.code,
@@ -332,7 +323,7 @@ class TestFiscalDocumentGeneric(TransactionCase):
             else:
                 self.assertEqual(
                     line.ipi_tax_id.name,
-                    "IPI 3.25%",
+                    "IPI 3,25%",
                     "Error to mapping IPI 5%"
                     " for Venda de Contribuinte Dentro do Estado.",
                 )
@@ -376,9 +367,6 @@ class TestFiscalDocumentGeneric(TransactionCase):
     def test_nfe_not_taxpayer_not_company(self):
         """Test NFe not taxpayer not Company."""
         for line in self.nfe_not_taxpayer_pf.fiscal_line_ids:
-            line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_taxes()
-
             if "Revenda" in line.fiscal_operation_line_id.name:
                 self.assertEqual(
                     line.cfop_id.code,
@@ -433,7 +421,7 @@ class TestFiscalDocumentGeneric(TransactionCase):
             else:
                 self.assertEqual(
                     line.ipi_tax_id.name,
-                    "IPI 3.25%",
+                    "IPI 3,25%",
                     "Error to mapping IPI 5%"
                     " for Venda de Contribuinte Dentro do Estado.",
                 )
@@ -477,9 +465,6 @@ class TestFiscalDocumentGeneric(TransactionCase):
     def test_nfe_export(self):
         """Test NFe export."""
         for line in self.nfe_export.fiscal_line_ids:
-            line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_taxes()
-
             if "Revenda" in line.fiscal_operation_line_id.name:
                 self.assertEqual(
                     line.cfop_id.code,
@@ -528,7 +513,7 @@ class TestFiscalDocumentGeneric(TransactionCase):
             else:
                 self.assertEqual(
                     line.ipi_tax_id.name,
-                    "IPI 3.25%",
+                    "IPI 3,25%",
                     "Error to mapping IPI 5%"
                     " for Venda de Contribuinte Dentro do Estado.",
                 )
@@ -580,9 +565,9 @@ class TestFiscalDocumentGeneric(TransactionCase):
                     "federal_taxes_national": 33.00,
                 }
             )
-
-            line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_taxes()
+            # força o compute, pois não é chamado automaticamente
+            # quando uma informação externa muda.
+            line._compute_tax_fields()
 
             if "Revenda" in line.fiscal_operation_line_id.name:
                 self.assertEqual(
@@ -681,9 +666,6 @@ class TestFiscalDocumentGeneric(TransactionCase):
     def test_nfe_sn_other_state(self):
         """Test NFe SN other state."""
         for line in self.nfe_sn_other_state.fiscal_line_ids:
-            line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_taxes()
-
             if "Revenda" in line.fiscal_operation_line_id.name:
                 self.assertEqual(
                     line.cfop_id.code,
@@ -778,9 +760,6 @@ class TestFiscalDocumentGeneric(TransactionCase):
     def test_nfe_sn_not_taxpayer(self):
         """Test NFe SN not taxpayer."""
         for line in self.nfe_sn_not_taxpayer.fiscal_line_ids:
-            line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_taxes()
-
             if "Revenda" in line.fiscal_operation_line_id.name:
                 self.assertEqual(
                     line.cfop_id.code,
@@ -862,9 +841,6 @@ class TestFiscalDocumentGeneric(TransactionCase):
     def test_nfe_sn_export(self):
         """Test NFe SN export."""
         for line in self.nfe_sn_export.fiscal_line_ids:
-            line._onchange_fiscal_operation_id()
-            line._onchange_fiscal_taxes()
-
             if "Revenda" in line.fiscal_operation_line_id.name:
                 self.assertEqual(
                     line.cfop_id.code,
@@ -974,7 +950,7 @@ class TestFiscalDocumentGeneric(TransactionCase):
         additional_data = self.nfe_not_taxpayer.fiscal_line_ids[0].additional_data
         self.assertEqual(
             additional_data,
-            "manual comment test",
+            "manual comment test - Valor Aprox. dos Tributos: R$\xa00,00",
         )
 
     def test_fields_freight_insurance_other_costs(self):

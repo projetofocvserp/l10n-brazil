@@ -41,6 +41,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__icms_origin__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__icms_origin__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_origin__0
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_origin__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_origin__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_origin__0
 msgid "0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8"
@@ -128,9 +129,15 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__icms_origin__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__icms_origin__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_origin__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_origin__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_origin__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_origin__1
 msgid "1 - Estrangeira – importação direta, exceto a indicada no código 6"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_classification__rate_type__1
+msgid "1 - Fixa"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -177,6 +184,11 @@ msgid "2 - Contribuinte Isento do ICMS"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_classification__rate_type__2
+msgid "2 - Padrão"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__company_tax_framework__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__partner_tax_framework__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_partner_profile__tax_framework__2
@@ -202,6 +214,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__icms_origin__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__icms_origin__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_origin__2
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_origin__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_origin__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_origin__2
 msgid ""
@@ -219,6 +232,11 @@ msgid "3 - Regime Normal"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_classification__rate_type__3
+msgid "3 - Sem Alíquota"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_definition__benefit_type__3
 msgid "3 - diferimento"
 msgstr ""
@@ -230,11 +248,17 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__icms_origin__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__icms_origin__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_origin__3
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_origin__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_origin__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_origin__3
 msgid ""
 "3 – Nacional – mercadoria ou bem com Conteúdo de Importação superior a 40% "
 "(quarenta por cento) e inferior ou igual a 70% (setenta por cento)"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_classification__rate_type__4
+msgid "4 - Uniforme Nacional"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -249,6 +273,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__icms_origin__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__icms_origin__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_origin__4
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_origin__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_origin__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_origin__4
 msgid ""
@@ -263,12 +288,18 @@ msgid "5 - Crédito Presumido"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_classification__rate_type__5
+msgid "5 - Uniforme Setorial"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__icms_origin__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__icms_origin__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__icms_origin__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__icms_origin__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__icms_origin__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_origin__5
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_origin__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_origin__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_origin__5
 msgid ""
@@ -283,6 +314,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__icms_origin__6
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__icms_origin__6
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_origin__6
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_origin__6
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_origin__6
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_origin__6
 msgid ""
@@ -297,6 +329,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__icms_origin__7
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__icms_origin__7
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_origin__7
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_origin__7
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_origin__7
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_origin__7
 msgid ""
@@ -311,6 +344,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__icms_origin__8
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__icms_origin__8
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_origin__8
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_origin__8
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_origin__8
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_origin__8
 msgid ""
@@ -417,6 +451,13 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model_terms:ir.actions.act_window,help:l10n_br_fiscal.tax_classification_action
+msgid ""
+"A Tax Classification is necessary to create fiscal operations for your "
+"fiscal moves."
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model_terms:ir.actions.act_window,help:l10n_br_fiscal.tax_group_action
 msgid ""
 "A Tax Group is necessary to create fiscal operations for your fiscal moves."
@@ -512,11 +553,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_type__active
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief__active
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature__active
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__active
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__active
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs__active
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__active
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__active
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre__active
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_service_type__active
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__active
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_ipi_control_seal__active
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_ipi_guideline__active
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_ipi_guideline_class__active
@@ -679,6 +723,11 @@ msgid "Add a new Tax"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model_terms:ir.actions.act_window,help:l10n_br_fiscal.tax_classification_action
+msgid "Add a new Tax Classification"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model_terms:ir.actions.act_window,help:l10n_br_fiscal.tax_group_action
 msgid "Add a new Tax Group"
 msgstr ""
@@ -757,9 +806,7 @@ msgstr ""
 
 #. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_cst__cst_type__all
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard_mixin__fiscal_operation_type__all
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation__fiscal_operation_type__all
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_nfe_import_xml__fiscal_operation_type__all
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.cfop_search
 msgid "All"
 msgstr ""
@@ -888,6 +935,11 @@ msgid "Annual Revenue"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__edoc_refund_debit_type__02
+msgid "Anulação de Crédito por Saídas Imunes/Isentas"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_form
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_definition_form
 msgid "Approve"
@@ -913,6 +965,7 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_serie_form
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.ncm_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_indicator_search
 msgid "Archived"
 msgstr ""
 
@@ -933,6 +986,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__08
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__08
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__08
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__08
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__08
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__08
 msgid "Ativo Imobilizado"
@@ -1056,6 +1110,58 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:uom.uom,name:l10n_br_fiscal.UOM_CARTELA
 msgid "CARTELA"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_group__tax_domain__cbs
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_fiscal_line_mixin_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_form
+msgid "CBS"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cbs_percent
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cbs_percent
+msgid "CBS %"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cbs_reduction
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cbs_reduction
+msgid "CBS % Reduction"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__amount_cbs_base
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cbs_base
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cbs_base
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__amount_cbs_base
+msgid "CBS Base"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cbs_base_type
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cbs_base_type
+msgid "CBS Base Type"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cbs_cst_code
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cbs_cst_code
+msgid "CBS CST Code"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__amount_cbs_value
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cbs_value
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cbs_value
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__amount_cbs_value
+msgid "CBS Value"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_fiscal_line_mixin_form
+msgid "CBS/IBS"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -1438,6 +1544,12 @@ msgid "CST"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cbs_cst_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cbs_cst_id
+msgid "CST CBS"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cofins_cst_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cofins_cst_id
 msgid "CST COFINS"
@@ -1452,6 +1564,12 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__cst_code
 msgid "CST Code"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__ibs_cst_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__ibs_cst_id
+msgid "CST IBS"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -1569,7 +1687,7 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_fiscal
-#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.l10n_br_fiscal_document_import_wizard_mixin_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_import_wizard_form
 msgid "Cancel"
 msgstr ""
 
@@ -1668,6 +1786,14 @@ msgid "City Taxation Code"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_document_line__city_taxation_code_id
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__city_taxation_code_id
+msgid ""
+"City Taxation Code for Municipal NFS-e or ISS Municipal Taxation Code for "
+"National NFS-e."
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__city_taxation_code_ids
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_definition_form
 msgid "City Taxation Codes"
@@ -1683,13 +1809,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_data_abstract__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_data_ncm_nbs_abstract__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_data_product_abstract__code
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__document_type
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__document_type
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related__document_type_code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_serie__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_status_wizard__document_type
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_type__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature__code
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__code
@@ -1697,6 +1824,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_partner_profile__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_service_type__code
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_ipi_control_seal__code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_ipi_guideline__code
@@ -1775,8 +1903,9 @@ msgstr ""
 #: code:addons/l10n_br_fiscal/constants/fiscal.py:0
 #: code:addons/l10n_br_fiscal/models/tax_pis_cofins.py:0
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__company_id
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__company_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__company_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__company_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__company_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__company_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_serie__company_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__company_id
@@ -1789,6 +1918,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__issuer__company
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_pis_cofins__piscofins_type__company
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__issuer__company
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__issuer__company
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__issuer__company
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_picking__issuer__company
 #: model:ir.ui.menu,name:l10n_br_fiscal.company_menu
@@ -1854,6 +1984,12 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_form
 msgid "Consultar Recibo"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__ind_final
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__ind_final
+msgid "Consumidor final"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -1944,6 +2080,11 @@ msgid "Create a new partner in your address book"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model_terms:ir.actions.act_window,help:l10n_br_fiscal.operation_indicator_action
+msgid "Create an Operation Indicator record"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #. odoo-python
 #: code:addons/l10n_br_fiscal/models/operation_dashboard.py:0
 #, python-format
@@ -1963,7 +2104,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_comment__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cst__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__create_uid
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__create_uid
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_serie__create_uid
@@ -1974,11 +2115,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature__create_uid
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_document_type__create_uid
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_partner_profile__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre__create_uid
@@ -1986,6 +2129,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax_range__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax__create_uid
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_estimate__create_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_group__create_uid
@@ -2006,7 +2150,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_comment__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cst__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__create_date
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__create_date
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_serie__create_date
@@ -2017,11 +2161,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature__create_date
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_document_type__create_date
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_partner_profile__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre__create_date
@@ -2029,6 +2175,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax_range__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax__create_date
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_group__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_ipi_control_seal__create_date
@@ -2038,6 +2185,19 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_pis_cofins_base__create_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_pis_cofins_credit__create_date
 msgid "Created on"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__credit_reversal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_tree
+msgid "Credit Reversal"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cst_code_prefix_like
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cst_code_prefix_like
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__cst_code_prefix_like
+msgid "Cst Code Prefix Like"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -2081,6 +2241,11 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:product.template,name:l10n_br_fiscal.customized_development_sale_product_template
 msgid "Customized Odoo Development"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__supply_location
+msgid "DFe Supply Location"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -2190,6 +2355,11 @@ msgid "Default Profile"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_res_company__tax_classification_id
+msgid "Default Tax Classification"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.fiscal_res_company_form
 msgid "Default Taxes"
 msgstr ""
@@ -2239,6 +2409,7 @@ msgid "Denegado"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__description
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__description
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_uom_uom__description
 msgid "Description"
@@ -2256,7 +2427,28 @@ msgid "Destination"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__destination_cnpj
+msgid "Destination CNPJ"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__destination_name
+msgid "Destination Name"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__destination_partner_id
+msgid "Destination Partner"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__destination_type_in_out
+msgid "Destination Type"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__service_provider__3
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_import_wizard_form
 msgid "Destinatário"
 msgstr ""
 
@@ -2290,7 +2482,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_comment__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cst__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__display_name
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__display_name
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_serie__display_name
@@ -2301,11 +2493,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature__display_name
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_document_type__display_name
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_partner_profile__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre__display_name
@@ -2313,6 +2507,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax_range__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax__display_name
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_estimate__display_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_group__display_name
@@ -2326,8 +2521,10 @@ msgid "Display Name"
 msgstr ""
 
 #. module: l10n_br_fiscal
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__document_id
-msgid "Document"
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__public_entity_type__3
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_partner_profile__public_entity_type__3
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__res_partner__public_entity_type__3
+msgid "Distrito Federal"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -2348,14 +2545,14 @@ msgstr ""
 
 #. module: l10n_br_fiscal
 #. odoo-python
-#: code:addons/l10n_br_fiscal/wizards/document_import_wizard_mixin.py:0
+#: code:addons/l10n_br_fiscal/wizards/document_import_wizard.py:0
 #, python-format
 msgid "Document Imported"
 msgstr ""
 
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_base_wizard_mixin__document_key
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__document_key
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__document_key
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related__document_key
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_status_wizard__document_key
 msgid "Document Key"
@@ -2381,7 +2578,7 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_base_wizard_mixin__document_number
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__document_number
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__document_number
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__document_number
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__document_number
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_status_wizard__document_number
 msgid "Document Number"
@@ -2395,7 +2592,7 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_base_wizard_mixin__document_serie
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__document_serie_id
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__document_serie
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__document_serie
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__document_serie_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_status_wizard__document_serie
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__document_serie_id
@@ -2423,7 +2620,7 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_base_wizard_mixin__document_type_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__document_type_id
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__document_type_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__document_type_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__document_type_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_status_wizard__document_type_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_type__type
@@ -2480,6 +2677,11 @@ msgid "Dutoviário"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__edoc_refund_debit_type__03
+msgid "Débitos de notas fiscais não processadas na apuração"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:uom.uom,name:l10n_br_fiscal.UOM_EMBALAGEM
 msgid "EMBALAGEM"
 msgstr ""
@@ -2503,9 +2705,15 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__02
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__02
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__02
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__02
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__02
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__02
 msgid "Embalagem"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_import_wizard_form
+msgid "Emitente"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -2527,6 +2735,13 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_form
 msgid "Enviar"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__public_entity_type__2
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_partner_profile__public_entity_type__2
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__res_partner__public_entity_type__2
+msgid "Estado"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -2564,10 +2779,16 @@ msgid "Exception"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__res_partner__nif_motive_absence__1
+msgid "Exemption from NIF"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__issqn_eligibility__6
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__issqn_eligibility__6
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__issqn_eligibility__6
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__issqn_eligibility__6
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__issqn_eligibility__6
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__issqn_eligibility__6
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__issqn_eligibility__6
 msgid "Exigibilidade Suspensa por Decisão Judicial"
@@ -2578,6 +2799,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__issqn_eligibility__7
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__issqn_eligibility__7
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__issqn_eligibility__7
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__issqn_eligibility__7
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__issqn_eligibility__7
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__issqn_eligibility__7
 msgid "Exigibilidade Suspensa por Processo Administrativo"
@@ -2588,6 +2810,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__issqn_eligibility__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__issqn_eligibility__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__issqn_eligibility__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__issqn_eligibility__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__issqn_eligibility__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__issqn_eligibility__1
 msgid "Exigível"
@@ -2623,6 +2846,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__issqn_eligibility__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__issqn_eligibility__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__issqn_eligibility__4
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__issqn_eligibility__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__issqn_eligibility__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__issqn_eligibility__4
 msgid "Exportação"
@@ -2677,6 +2901,11 @@ msgid "FRASCO"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__issuer_name
+msgid "Fantasia"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_dashboard_kanban
 msgid "Faturas canceladas"
 msgstr ""
@@ -2700,13 +2929,12 @@ msgid "Ferroviário"
 msgstr ""
 
 #. module: l10n_br_fiscal
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__file
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__file
 msgid "File to Import"
 msgstr ""
 
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__ind_final
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__ind_final
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__ind_final
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__ind_final
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_res_partner__ind_final
@@ -2824,7 +3052,8 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.actions.act_window,name:l10n_br_fiscal.document_type_action
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_base_wizard_mixin__document_id
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__document_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__document_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__document_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related__document_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_serie__document_type_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_status_wizard__document_id
@@ -2841,12 +3070,6 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_comment__object_id__l10n_br_fiscal_document_line_mixin
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_line_form
 msgid "Fiscal Document Line"
-msgstr ""
-
-#. module: l10n_br_fiscal
-#: model:ir.model,name:l10n_br_fiscal.model_l10n_br_fiscal_document_line_mixin_methods
-#: model:ir.model,name:l10n_br_fiscal.model_l10n_br_fiscal_document_mixin_methods
-msgid "Fiscal Document Mixin Methods"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -2905,7 +3128,7 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.model,name:l10n_br_fiscal.model_l10n_br_fiscal_operation
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__fiscal_operation_id
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__fiscal_operation_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__fiscal_operation_id
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_form
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_search
 msgid "Fiscal Operation"
@@ -2931,7 +3154,7 @@ msgid "Fiscal Operation Line already exists with this name !"
 msgstr ""
 
 #. module: l10n_br_fiscal
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__fiscal_operation_type
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__fiscal_operation_type
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__fiscal_operation_type
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_search
 msgid "Fiscal Operation Type"
@@ -3053,45 +3276,66 @@ msgstr ""
 #. module: l10n_br_fiscal
 #. odoo-python
 #: code:addons/l10n_br_fiscal/constants/fiscal.py:0
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cbs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cofins_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cofins_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cofinsst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__ibs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__ipi_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__pis_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__pis_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__pisst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cbs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cofins_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cofins_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cofinsst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__ibs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__ipi_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__pis_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__pis_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__pisst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cbs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cofins_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cofins_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cofinsst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__ibs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__ipi_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__pis_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__pis_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__pisst_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__tax_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cbs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cofins_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cofins_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cofinsst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__ibs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__ipi_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__pis_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__pis_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__pisst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cbs_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cofins_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cofins_wh_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cofinsst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__ibs_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__ipi_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__pis_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__pis_wh_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__pisst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cbs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cofins_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cofins_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cofinsst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__ibs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__ipi_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__pis_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__pis_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__pisst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cbs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cofins_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cofins_wh_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cofinsst_base_type__fixed
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__ibs_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__ipi_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__pis_base_type__fixed
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__pis_wh_base_type__fixed
@@ -3210,6 +3454,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_search
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.partner_profile_search
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.service_type_search
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_search
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_ipi_guideline_search
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_pis_cofins_search
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_search
@@ -3238,6 +3483,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_service_type__has_message
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__has_message
 msgid "Has Message"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cst_code_prefix_like
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cst_code_prefix_like
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__cst_code_prefix_like
+msgid "Helper field to filter taxes by CST code prefix (3 chars) using LIKE."
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -3292,6 +3544,58 @@ msgid "IBPT Update"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_group__tax_domain__ibs
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_fiscal_line_mixin_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_form
+msgid "IBS"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__ibs_percent
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__ibs_percent
+msgid "IBS %"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__ibs_reduction
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__ibs_reduction
+msgid "IBS % Reduction"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__amount_ibs_base
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__ibs_base
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__ibs_base
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__amount_ibs_base
+msgid "IBS Base"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__ibs_base_type
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__ibs_base_type
+msgid "IBS Base Type"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__ibs_cst_code
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__ibs_cst_code
+msgid "IBS CST Code"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__amount_ibs_value
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__ibs_value
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__ibs_value
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__amount_ibs_value
+msgid "IBS Value"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.fiscal_res_company_form
+msgid "IBS/CBS Tax Classification"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__tax_icms_or_issqn__icms
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__tax_icms_or_issqn__icms
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__tax_icms_or_issqn__icms
@@ -3299,6 +3603,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__tax_icms_or_issqn__icms
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__tax_icms_or_issqn__icms
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__tax_icms_or_issqn__icms
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__tax_icms_or_issqn__icms
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__tax_icms_or_issqn__icms
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__tax_icms_or_issqn__icms
 #: model:ir.ui.menu,name:l10n_br_fiscal.tax_icms_config_menu
@@ -4346,7 +4651,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_comment__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cst__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__id
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_serie__id
@@ -4357,11 +4662,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature__id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_document_type__id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_partner_profile__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre__id
@@ -4369,6 +4676,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax_range__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax__id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_estimate__id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_group__id
@@ -4384,6 +4692,7 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_group__tax_domain__ii
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_fiscal_line_mixin_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_form
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.ncm_search
 msgid "II"
 msgstr ""
@@ -4670,8 +4979,19 @@ msgid "IRPJ WH"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_group__tax_domain__is
+msgid "IS"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.simplified_tax_range_tree
 msgid "ISS %"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__national_taxation_code_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__national_taxation_code_id
+msgid "ISS National Taxation Code"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -4682,6 +5002,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_group__tax_domain__issqn
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__tax_icms_or_issqn__issqn
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__tax_icms_or_issqn__issqn
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__tax_icms_or_issqn__issqn
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__tax_icms_or_issqn__issqn
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__tax_icms_or_issqn__issqn
 #: model:ir.ui.menu,name:l10n_br_fiscal.tax_issqn_config_menu
@@ -4873,18 +5194,23 @@ msgid "If your company is industry or ......"
 msgstr ""
 
 #. module: l10n_br_fiscal
-#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.l10n_br_fiscal_document_import_wizard_mixin_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_import_wizard_form
 msgid "Import Document"
 msgstr ""
 
 #. module: l10n_br_fiscal
-#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.l10n_br_fiscal_document_import_wizard_mixin_form
+#: model:ir.model,name:l10n_br_fiscal.model_l10n_br_fiscal_document_import_wizard
+msgid "Import Document Wizard"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_import_wizard_form
 msgid "Import Fiscal Document"
 msgstr ""
 
 #. module: l10n_br_fiscal
 #. odoo-python
-#: code:addons/l10n_br_fiscal/wizards/document_import_wizard_mixin.py:0
+#: code:addons/l10n_br_fiscal/wizards/document_import_wizard.py:0
 #, python-format
 msgid "Importation not implemented for %s!"
 msgstr ""
@@ -4920,6 +5246,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__issqn_eligibility__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_ipi_guideline__cst_group__imunidade
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__issqn_eligibility__5
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__issqn_eligibility__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__issqn_eligibility__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__issqn_eligibility__5
 msgid "Imunidade"
@@ -4930,11 +5257,12 @@ msgstr ""
 #: code:addons/l10n_br_fiscal/constants/fiscal.py:0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_cfop__type_in_out__in
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_cst__cst_type__in
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard_mixin__fiscal_operation_type__in
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard__destination_type_in_out__in
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard__fiscal_operation_type__in
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard__issuer_type_in_out__in
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_serie__fiscal_type__in
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation__fiscal_operation_type__in
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_definition__type_in_out__in
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_nfe_import_xml__fiscal_operation_type__in
 #, python-format
 msgid "In"
 msgstr ""
@@ -5102,6 +5430,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__issqn_eligibility__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_ipi_guideline__cst_group__isencao
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__issqn_eligibility__3
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__issqn_eligibility__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__issqn_eligibility__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__issqn_eligibility__3
 msgid "Isenção"
@@ -5111,6 +5440,26 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__issuer
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__issuer
 msgid "Issuer"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__issuer_cnpj
+msgid "Issuer CNPJ"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__issuer_legal_name
+msgid "Issuer Legal Name"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__issuer_partner_id
+msgid "Issuer Partner"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__issuer_type_in_out
+msgid "Issuer Type"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -5125,7 +5474,7 @@ msgstr ""
 
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_base_wizard_mixin__justification
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__justification
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__justification
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_status_wizard__justification
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__justification
 msgid "Justification"
@@ -5161,7 +5510,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_comment____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cst____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document____last_update
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin____last_update
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_serie____last_update
@@ -5172,11 +5521,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature____last_update
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_document_type____last_update
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_partner_profile____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre____last_update
@@ -5184,6 +5535,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax_range____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax____last_update
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_estimate____last_update
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_group____last_update
@@ -5209,7 +5561,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_comment__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cst__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__write_uid
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__write_uid
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_serie__write_uid
@@ -5220,11 +5572,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature__write_uid
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_document_type__write_uid
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_partner_profile__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre__write_uid
@@ -5232,6 +5586,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax_range__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax__write_uid
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_estimate__write_uid
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_group__write_uid
@@ -5252,7 +5607,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_comment__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cst__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__write_date
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__write_date
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_serie__write_date
@@ -5263,11 +5618,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature__write_date
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_document_type__write_date
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_partner_profile__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre__write_date
@@ -5275,6 +5632,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax_range__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax__write_date
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_estimate__write_date
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_group__write_date
@@ -5315,6 +5673,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__icmsst_base_type__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__icmsst_base_type__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icmsst_base_type__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icmsst_base_type__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icmsst_base_type__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icmsst_base_type__1
 msgid "Lista Negativa (valor)"
@@ -5326,6 +5685,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__icmsst_base_type__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__icmsst_base_type__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icmsst_base_type__3
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icmsst_base_type__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icmsst_base_type__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icmsst_base_type__3
 msgid "Lista Neutra (valor)"
@@ -5337,6 +5697,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__icmsst_base_type__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__icmsst_base_type__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icmsst_base_type__2
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icmsst_base_type__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icmsst_base_type__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icmsst_base_type__2
 msgid "Lista Positiva (valor)"
@@ -5434,6 +5795,8 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__icmsst_base_type__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_base_type__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icmsst_base_type__4
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_base_type__0
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icmsst_base_type__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_base_type__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icmsst_base_type__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_base_type__0
@@ -5463,6 +5826,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__07
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__07
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__07
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__07
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__07
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__07
 msgid "Material de Uso e Consumo"
@@ -5475,6 +5839,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__01
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__01
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__01
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__01
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__01
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__01
 msgid "Matéria-prima"
@@ -5504,6 +5869,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__00
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__00
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__00
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__00
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__00
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__00
 msgid "Mercadoria para Revenda"
@@ -5554,6 +5920,11 @@ msgid "Move Type"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__edoc_refund_debit_type__04
+msgid "Multa e juros"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__transport_modal__06
 msgid "Multimodal"
 msgstr ""
@@ -5562,6 +5933,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_res_partner__l10n_br_im_code
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_res_users__l10n_br_im_code
 msgid "Municipal Tax Number"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__public_entity_type__4
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_partner_profile__public_entity_type__4
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__res_partner__public_entity_type__4
+msgid "Município"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -5711,6 +6089,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__ind_pres__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__ind_pres__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__ind_pres__4
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__ind_pres__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__ind_pres__4
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_picking__ind_pres__4
 msgid "NFC-e entrega em domicílio"
@@ -5721,6 +6100,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_res_config_settings__module_l10n_br_nfse
 #: model:ir.ui.menu,name:l10n_br_fiscal.document_nfse_menu
 msgid "NFS-e"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_res_partner__nif_motive_absence
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_res_users__nif_motive_absence
+msgid "NIF motive absence"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__res_partner__nif_motive_absence__2
+msgid "NIF not required"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -5741,11 +6131,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature__name
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_document_type__name
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_partner_profile__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre__name
@@ -5753,6 +6145,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax_range__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax__name
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_group__name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_ipi_control_seal__name
@@ -5784,6 +6177,28 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.model,name:l10n_br_fiscal.model_l10n_br_fiscal_simplified_tax_range
 msgid "National Simplified Tax Range"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.actions.act_window,name:l10n_br_fiscal.national_taxation_code_action
+#: model:ir.model,name:l10n_br_fiscal.model_l10n_br_fiscal_national_taxation_code
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_product_product__national_taxation_code_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_product_template__national_taxation_code_id
+#: model:ir.ui.menu,name:l10n_br_fiscal.national_taxation_code_menu
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_definition_form
+msgid "National Taxation Code"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_document_line__national_taxation_code_id
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__national_taxation_code_id
+msgid "National Taxation Code for the ISS tax (National NFS-e)"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__national_taxation_code_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_definition_form
+msgid "National Taxation Codes"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -5845,6 +6260,13 @@ msgid "Next number of this sequence"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#. odoo-python
+#: code:addons/l10n_br_fiscal/wizards/document_import_wizard.py:0
+#, python-format
+msgid "No CNPJ or Legal Name to search for a partner!"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_cnae__internal_type__normal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__edoc_purpose__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation__edoc_purpose__1
@@ -5868,8 +6290,25 @@ msgid "Not in NCMs"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__res_partner__nif_motive_absence__0
+msgid "Not informed in the origin note"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_related_form
 msgid "Nota Fiscal/Produtor/Cupom Fiscal"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__edoc_purpose__5
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation__edoc_purpose__5
+msgid "Nota de Crédito"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__edoc_purpose__6
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation__edoc_purpose__6
+msgid "Nota de Débito"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -5947,13 +6386,17 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_contract__ind_final__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__issqn_incentive__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__ind_final__0
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__ind_final__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__issqn_incentive__2
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__ind_final__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__issqn_incentive__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__ind_final__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_definition__ind_final__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__ind_final__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__issqn_incentive__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__res_partner__ind_final__0
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__ind_final__0
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__issqn_incentive__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__ind_final__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__issqn_incentive__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__issqn_incentive__2
@@ -5962,10 +6405,16 @@ msgid "Não"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__edoc_refund_credit_type__00
+msgid "Não Implementado"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__issqn_eligibility__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__issqn_eligibility__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__issqn_eligibility__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__issqn_eligibility__2
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__issqn_eligibility__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__issqn_eligibility__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__issqn_eligibility__2
 msgid "Não incidência"
@@ -5976,6 +6425,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__ind_pres__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__ind_pres__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__ind_pres__2
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__ind_pres__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__ind_pres__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_picking__ind_pres__2
 msgid "Não presencial, internet"
@@ -5986,6 +6436,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__ind_pres__9
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__ind_pres__9
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__ind_pres__9
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__ind_pres__9
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__ind_pres__9
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_picking__ind_pres__9
 msgid "Não presencial, outros"
@@ -5996,6 +6447,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__ind_pres__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__ind_pres__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__ind_pres__3
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__ind_pres__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__ind_pres__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_picking__ind_pres__3
 msgid "Não presencial, teleatendimento"
@@ -6006,6 +6458,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__ind_pres__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__ind_pres__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__ind_pres__0
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__ind_pres__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__ind_pres__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_picking__ind_pres__0
 msgid "Não se aplica"
@@ -6055,6 +6508,11 @@ msgid "Operation Dashboard"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_indicator_form
+msgid "Operation Details"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation__document_type_ids
 msgid "Operation Document Types"
 msgstr ""
@@ -6063,6 +6521,31 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__operation_fiscal_type
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__operation_fiscal_type
 msgid "Operation Fiscal Type"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.actions.act_window,name:l10n_br_fiscal.operation_indicator_action
+#: model:ir.model,name:l10n_br_fiscal.model_l10n_br_fiscal_operation_indicator
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__operation_indicator_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__operation_indicator_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_product_product__operation_indicator_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_product_template__operation_indicator_id
+#: model:ir.ui.menu,name:l10n_br_fiscal.operation_indicator_menu
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_indicator_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_indicator_search
+msgid "Operation Indicator"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__code
+msgid "Operation Indicator Code"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model_terms:ir.actions.act_window,help:l10n_br_fiscal.operation_indicator_action
+msgid ""
+"Operation Indicators are used to categorize consumption\n"
+"                operations."
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -6085,6 +6568,11 @@ msgid "Operation Line Refund"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__operation_location
+msgid "Operation Location Consideration"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__operation_name
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__operation_name
 msgid "Operation Name"
@@ -6093,7 +6581,15 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__fiscal_operation_type
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__fiscal_operation_type
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__operation_type
 msgid "Operation Type"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__code
+msgid ""
+"Operation indicator code according to Annex VII of NT 004/2025 (e.g., "
+"020101, 030101)"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -6121,6 +6617,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__ind_pres__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__ind_pres__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__ind_pres__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__ind_pres__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__ind_pres__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_picking__ind_pres__1
 msgid "Operação presencial"
@@ -6131,6 +6628,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__ind_pres__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__ind_pres__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__ind_pres__5
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__ind_pres__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__ind_pres__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_picking__ind_pres__5
 msgid "Operação presencial, fora do estabelecimento"
@@ -6173,11 +6671,12 @@ msgstr ""
 #: code:addons/l10n_br_fiscal/constants/fiscal.py:0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_cfop__type_in_out__out
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_cst__cst_type__out
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard_mixin__fiscal_operation_type__out
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard__destination_type_in_out__out
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard__fiscal_operation_type__out
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard__issuer_type_in_out__out
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_serie__fiscal_type__out
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation__fiscal_operation_type__out
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_definition__type_in_out__out
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_nfe_import_xml__fiscal_operation_type__out
 #, python-format
 msgid "Out"
 msgstr ""
@@ -6200,6 +6699,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__99
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__99
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__99
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__99
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__99
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__99
 msgid "Outras"
@@ -6219,6 +6719,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__10
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__10
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__10
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__10
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__10
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__10
 msgid "Outros insumos"
@@ -6451,7 +6952,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:l10n_br_fiscal.partner_action
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_base_wizard_mixin__partner_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__partner_id
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__partner_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__partner_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__partner_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__partner_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_mixin__partner_id
@@ -6461,6 +6962,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__issuer__partner
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__issuer__partner
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__issuer__partner
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__issuer__partner
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__issuer__partner
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_picking__issuer__partner
 #: model:ir.ui.menu,name:l10n_br_fiscal.partner_menu
@@ -6515,6 +7017,8 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__icmsst_base_type__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_base_type__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icmsst_base_type__5
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_base_type__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icmsst_base_type__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_base_type__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icmsst_base_type__5
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_base_type__1
@@ -6526,45 +7030,66 @@ msgstr ""
 #. odoo-python
 #: code:addons/l10n_br_fiscal/constants/fiscal.py:0
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax__percent_amount
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cbs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cofins_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cofins_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cofinsst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__ibs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__ipi_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__pis_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__pis_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__pisst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cbs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cofins_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cofins_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cofinsst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__ibs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__ipi_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__pis_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__pis_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__pisst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cbs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cofins_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cofins_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cofinsst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__ibs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__ipi_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__pis_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__pis_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__pisst_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__tax_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cbs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cofins_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cofins_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cofinsst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__ibs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__ipi_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__pis_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__pis_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__pisst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cbs_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cofins_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cofins_wh_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cofinsst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__ibs_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__ipi_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__pis_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__pis_wh_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__pisst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cbs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cofins_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cofins_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cofinsst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__ibs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__ipi_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__pis_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__pis_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__pisst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cbs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cofins_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cofins_wh_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cofinsst_base_type__percent
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__ibs_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__ipi_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__pis_base_type__percent
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__pis_wh_base_type__percent
@@ -6595,6 +7120,19 @@ msgid "Peso Total"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_indicator_form
+msgid "Place of supply"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__supply_location
+msgid ""
+"Place of supply to be identified in the Digital Fiscal Document (DFe), such "
+"as supplier establishment, acquirer address, recipient address, or other "
+"locations depending on the operation"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_cest__segment__15
 msgid "Pneumáticos, câmaras de ar e protetores de borracha"
 msgstr ""
@@ -6610,7 +7148,14 @@ msgid "Presumed"
 msgstr ""
 
 #. module: l10n_br_fiscal
-#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.l10n_br_fiscal_document_import_wizard_mixin_form
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__presumed_credit
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_search
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_tree
+msgid "Presumed Credit"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_import_wizard_form
 msgid "Preview Data"
 msgstr ""
 
@@ -6620,6 +7165,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__icms_base_type__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__icms_base_type__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_base_type__2
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_base_type__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_base_type__2
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_base_type__2
 msgid "Preço Tabelado Máximo (valor)"
@@ -6631,6 +7177,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__icmsst_base_type__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__icmsst_base_type__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icmsst_base_type__0
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icmsst_base_type__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icmsst_base_type__0
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icmsst_base_type__0
 msgid "Preço tabelado ou máximo  sugerido"
@@ -6744,6 +7291,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__04
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__04
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__04
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__04
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__04
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__04
 msgid "Produto Acabado"
@@ -6756,6 +7304,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__06
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__06
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__06
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__06
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__06
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__06
 msgid "Produto Intermediário"
@@ -6768,6 +7317,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__03
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__03
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__03
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__03
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__03
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__03
 msgid "Produto em Processo"
@@ -6872,45 +7422,66 @@ msgstr ""
 #: code:addons/l10n_br_fiscal/constants/fiscal.py:0
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__quantity
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cbs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cofins_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cofins_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__cofinsst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__ibs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__ipi_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__pis_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__pis_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__pisst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cbs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cofins_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cofins_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__cofinsst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__ibs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__ipi_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__pis_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__pis_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__pisst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cbs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cofins_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cofins_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__cofinsst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__ibs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__ipi_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__pis_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__pis_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__pisst_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__tax_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cbs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cofins_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cofins_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__cofinsst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__ibs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__ipi_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__pis_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__pis_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__pisst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cbs_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cofins_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cofins_wh_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__cofinsst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__ibs_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__ipi_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__pis_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__pis_wh_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__pisst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cbs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cofins_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cofins_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__cofinsst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__ibs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__ipi_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__pis_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__pis_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__pisst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cbs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cofins_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cofins_wh_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__cofinsst_base_type__quantity
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__ibs_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__ipi_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__pis_base_type__quantity
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__pis_wh_base_type__quantity
@@ -6943,6 +7514,13 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__rps_number
 msgid "RPS Number"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__rate_type
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_search
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_tree
+msgid "Rate Type"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -6991,6 +7569,13 @@ msgid "Regular"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__regular_taxation
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_search
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_tree
+msgid "Regular Taxation"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__state_fiscal__01
 msgid "Regular extemporâneo"
 msgstr ""
@@ -7008,6 +7593,18 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.ncm_form
 msgid "Related CEST"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__document_type_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_tree
+msgid "Related DFes"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__document_type_ids
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_form
+msgid "Related Digital Fiscal Documents"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -7117,7 +7714,7 @@ msgstr ""
 
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_base_wizard_mixin__rps_number
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__rps_number
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__rps_number
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_status_wizard__rps_number
 msgid "Rps Number"
 msgstr ""
@@ -7304,6 +7901,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__09
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__09
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__09
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__09
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__09
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__09
 msgid "Serviços"
@@ -7329,13 +7927,17 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_contract__ind_final__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__contract_line__issqn_incentive__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__ind_final__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__ind_final__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line__issqn_incentive__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__ind_final__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__issqn_incentive__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_mixin__ind_final__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax_definition__ind_final__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order__ind_final__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__issqn_incentive__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__res_partner__ind_final__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order__ind_final__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__issqn_incentive__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order__ind_final__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__issqn_incentive__1
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__issqn_incentive__1
@@ -7411,6 +8013,13 @@ msgid "Source"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__supply_characteristic
+msgid ""
+"Specific characteristic of the supply execution that determines the place of"
+" supply"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__date_start
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_definition__date_start
 msgid "Start Date"
@@ -7422,7 +8031,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_base_wizard_mixin__state
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_city_taxation_code__state_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__state
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__state
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__state
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_related__state_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_status_wizard__state
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation__state
@@ -7447,7 +8056,7 @@ msgstr ""
 
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_base_wizard_mixin__document_status
-#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard_mixin__document_status
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_import_wizard__document_status
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_status_wizard__document_status
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_invalidate_number__state
 msgid "Status"
@@ -7491,6 +8100,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_operation_line__product_type__05
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__product_template__fiscal_type__05
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__fiscal_type__05
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__fiscal_type__05
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__fiscal_type__05
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__fiscal_type__05
 msgid "Subproduto"
@@ -7499,6 +8109,21 @@ msgstr ""
 #. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_type__sufix
 msgid "Sufix"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__supply_characteristic
+msgid "Supply Characteristic"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_indicator_form
+msgid "Supply Information"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_indicator_form
+msgid "Supply characteristic"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -7691,6 +8316,18 @@ msgid "Tax Benefit TO"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cbs_tax_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cbs_tax_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__tax_cbs_id
+msgid "Tax CBS"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax_range__tax_cbs_percent
+msgid "Tax CBS Percent"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__cofins_tax_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__cofins_tax_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_pis_cofins__tax_cofins_id
@@ -7748,10 +8385,25 @@ msgid "Tax CSLL RET"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.actions.act_window,name:l10n_br_fiscal.tax_classification_act_window
+#: model:ir.actions.act_window,name:l10n_br_fiscal.tax_classification_action
+#: model:ir.model,name:l10n_br_fiscal.model_l10n_br_fiscal_tax_classification
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__tax_classification_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__tax_classification_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__tax_classification_id
+#: model:ir.ui.menu,name:l10n_br_fiscal.tax_classification_menu
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_fiscal_line_mixin_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_search
+msgid "Tax Classification"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model,name:l10n_br_fiscal.model_l10n_br_fiscal_tax_definition
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cest__tax_definition_ids
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cfop__tax_definition_ids
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_city_taxation_code__tax_definition_ids
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__tax_definition_ids
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__tax_definition_ids
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__tax_definition_ids
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_line__tax_definition_ids
@@ -7836,6 +8488,18 @@ msgstr ""
 #: model:ir.model.constraint,message:l10n_br_fiscal.constraint_l10n_br_fiscal_tax_group_fiscal_tax_group_code_uniq
 #, python-format
 msgid "Tax Group already exists with this name !"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__ibs_tax_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__ibs_tax_id
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__tax_ibs_id
+msgid "Tax IBS"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_simplified_tax_range__tax_ibs_percent
+msgid "Tax IBS Percent"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -7966,6 +8630,11 @@ msgid "Tax Included in Price"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_form
+msgid "Tax Indicators"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line__pis_tax_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_line_mixin__pis_tax_id
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_pis_cofins__tax_pis_id
@@ -8092,6 +8761,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_fiscal_line_mixin_form
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_line_form
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.fiscal_res_company_form
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_classification_form
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_group_form
 msgid "Taxes"
 msgstr ""
@@ -8103,7 +8773,9 @@ msgid "Taxes Settings"
 msgstr ""
 
 #. module: l10n_br_fiscal
-#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_document_line__product_id
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_document__user_id
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_document_line__company_id
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_document_line__quantity
 msgid "Technical Field."
 msgstr ""
 
@@ -8207,6 +8879,24 @@ msgid "Tintas e vernizes"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__public_entity_type
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_partner_profile__public_entity_type
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_res_partner__public_entity_type
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_res_users__public_entity_type
+msgid "Tipo de Entidade Governamental"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__edoc_refund_credit_type
+msgid "Tipo de Nota de Crédito"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document__edoc_refund_debit_type
+msgid "Tipo de Nota de Débito"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.document_search
 msgid "To Send"
 msgstr ""
@@ -8252,6 +8942,16 @@ msgid ""
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__edoc_refund_debit_type__05
+msgid "Transferência de crédito de sucessão"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__edoc_refund_debit_type__01
+msgid "Transferência de créditos para Cooperativas"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cfop__ind_transp
 msgid "Transport?"
 msgstr ""
@@ -8284,6 +8984,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cfop__type_move
 #: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.cfop_search
 msgid "Type Move"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_indicator_form
+msgid "Type of operation"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__operation_type
+msgid ""
+"Type of operation according to Art. 11 of Complementary Law No. 214/2025"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -8322,6 +9033,13 @@ msgid "Units of Measure"
 msgstr ""
 
 #. module: l10n_br_fiscal
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document__public_entity_type__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_partner_profile__public_entity_type__1
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__res_partner__public_entity_type__1
+msgid "União"
+msgstr ""
+
+#. module: l10n_br_fiscal
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cest__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_cfop__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_city_taxation_code__code_unmasked
@@ -8334,11 +9052,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_document_type__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_icms_relief__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_legal_nature__code_unmasked
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_national_taxation_code__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbm__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_nbs__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_ncm__code_unmasked
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_product_genre__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_service_type__code_unmasked
+#: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_classification__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_ipi_control_seal__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_ipi_guideline__code_unmasked
 #: model:ir.model.fields,field_description:l10n_br_fiscal.field_l10n_br_fiscal_tax_ipi_guideline_class__code_unmasked
@@ -8424,6 +9145,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_line_mixin__icms_base_type__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_tax__icms_base_type__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__purchase_order_line__icms_base_type__3
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_blanket_order_line__icms_base_type__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__sale_order_line__icms_base_type__3
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__stock_move__icms_base_type__3
 msgid "Valor da Operação"
@@ -8524,13 +9246,19 @@ msgid "Website communication history"
 msgstr ""
 
 #. module: l10n_br_fiscal
-#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_group_form
-msgid "Withholding"
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.operation_indicator_form
+msgid "Where the operation is considered"
 msgstr ""
 
 #. module: l10n_br_fiscal
-#: model:ir.model,name:l10n_br_fiscal.model_l10n_br_fiscal_document_import_wizard_mixin
-msgid "Wizard Import Document Mixin"
+#: model:ir.model.fields,help:l10n_br_fiscal.field_l10n_br_fiscal_operation_indicator__operation_location
+msgid ""
+"Where the operation is considered to take place according to the legislation"
+msgstr ""
+
+#. module: l10n_br_fiscal
+#: model_terms:ir.ui.view,arch_db:l10n_br_fiscal.tax_group_form
+msgid "Withholding"
 msgstr ""
 
 #. module: l10n_br_fiscal
@@ -8623,10 +9351,9 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_base_wizard_mixin__state__confirm
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_cancel_wizard__state__confirm
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_correction_wizard__state__confirm
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard_mixin__state__confirm
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard__state__confirm
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_status_wizard__state__confirm
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_invalidate_number_wizard__state__confirm
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_nfe_import_xml__state__confirm
 msgid "confirm"
 msgstr ""
 
@@ -8639,10 +9366,9 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_base_wizard_mixin__state__done
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_cancel_wizard__state__done
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_correction_wizard__state__done
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard_mixin__state__done
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard__state__done
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_status_wizard__state__done
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_invalidate_number_wizard__state__done
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_nfe_import_xml__state__done
 msgid "done"
 msgstr ""
 
@@ -8655,10 +9381,9 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_base_wizard_mixin__state__init
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_cancel_wizard__state__init
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_correction_wizard__state__init
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard_mixin__state__init
+#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_import_wizard__state__init
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_document_status_wizard__state__init
 #: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_fiscal_invalidate_number_wizard__state__init
-#: model:ir.model.fields.selection,name:l10n_br_fiscal.selection__l10n_br_nfe_import_xml__state__init
 msgid "init"
 msgstr ""
 
@@ -8688,7 +9413,7 @@ msgstr ""
 
 #. module: l10n_br_fiscal
 #. odoo-python
-#: code:addons/l10n_br_fiscal/wizards/document_import_wizard_mixin.py:0
+#: code:addons/l10n_br_fiscal/wizards/document_import_wizard.py:0
 #, python-format
 msgid "xsdata Python lib not installed!"
 msgstr ""
